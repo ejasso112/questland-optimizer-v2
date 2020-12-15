@@ -1,0 +1,140 @@
+
+@import 'variables.scss';
+
+.footer {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background: $secondary-background;
+    padding: $footer-padding;
+
+    &__content {
+        display: flex;
+        max-width: 1600px;
+
+        &__block {
+            padding: 0px 48px;
+        }
+
+        &__about {
+            max-width: 650px;
+            &__heading {
+                padding-bottom: 10px;
+            }
+
+            &__desc { 
+                padding: 6px 0px;
+                text-align: justify;
+                line-height: 1.5;
+                font-size: 16px;
+                font-weight: 300;
+            }
+        }
+
+        &__site {
+            display: flex;
+            flex-direction: column;
+
+            &__heading {
+                padding-bottom: 10px;
+            }
+
+            &__link { 
+                padding: 6px 0px;
+                font-size: 16px;
+                font-weight: 300;
+
+                &--active {
+                    color: #23A8E4;
+                    font-weight: 500;
+                }
+
+                &:hover {
+                    transition: .2s;
+                    color: #23A8E4;
+                }
+            }
+        }
+
+        &__contact {
+            display: flex;
+            flex-direction: column;
+
+            &__heading {
+                padding-bottom: 10px;
+            }
+
+            &__link {
+                display: flex;
+                flex-shrink: 0;
+                align-items: center;
+                margin-bottom: 8px;
+                padding: 6px 0px;
+                font-size: 16px;
+                font-weight: 300;
+
+                > svg {
+                    flex-shrink: 0;
+                    fill: #E2E2E2;
+                }
+                > span {
+                    padding-left: 8px;
+                }
+
+                &--discord {
+                    &:hover {
+                        > svg {
+                            transition: .2s;
+                            fill: #7289DA;
+                        }
+
+                        > span {
+                            transition: .2s;
+                            color: #7289DA;
+                        }
+                    }
+                }
+
+                &--github {
+                    &:hover {
+                        > svg {
+                            transition: .2s;
+                            fill: #2ebc4f;
+                        }
+
+                        > span {
+                            transition: .2s;
+                            color: #2ebc4f;
+                        }
+                    }
+                }
+
+                &--personal {
+                    &:hover {
+                        > svg {
+                            transition: .2s;
+                            fill: #E31B6D;
+                        }
+
+                        > span {
+                            transition: .2s;
+                            color: #E31B6D;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__copy {
+        padding-top: 64px;
+        text-transform: uppercase;
+        color: #C7C7C7;
+        font-size: 13px;
+
+        &__year {
+            color: #E31B6D;
+        }
+    }
+}
