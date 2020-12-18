@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>questlandOptimizer - Optimize</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script defer src="res/script.js"></script>
-    <link rel="stylesheet" type="text/css" href="res/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer type="module" src="res/js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="res/css/style.css" />
 </head>
 
 <body>
@@ -24,10 +25,145 @@
         <div class="noice"></div>
     </header>
 
-    <main class="home__main">
-        <section class="home__main__content">
-            <h1 class="home__main__content__heading">Optimize.</h1>
+    <main class="optimize">
+        <section class="optimizer">
+            <article class="optimizer__guildBonuses">
+                <h3 class="optimizer__guildBonuses__heading">Guild Bonuses:</h3>
+
+                <table class="optimizer__guildBonuses__table">
+                    <tbody class="optimizer__guildBonuses__table__tableBody">
+                        <tr class="optimizer__guildBonuses__table__tableRow">
+                            <th class="optimizer__guildBonuses__table__tableHeading"><label class="optimizer__guildBonuses__name">Attack:</label></th>
+                            <td class="optimizer__guildBonuses__table__tableData"><input class="optimizer__guildBonuses__value" type="number" min="0" value="0"> %</td>
+                        </tr>
+
+                        <tr class="optimizer__guildBonuses__table__tableRow">
+                            <th class="optimizer__guildBonuses__table__tableHeading"><label class="optimizer__guildBonuses__name">Defense:</label></th>
+                            <td class="optimizer__guildBonuses__table__tableData"><input class="optimizer__guildBonuses__value" type="number" min="0" value="0"> %</td>
+                        </tr>
+                        
+                        <tr class="optimizer__guildBonuses__table__tableRow">
+                            <th class="optimizer__guildBonuses__table__tableHeading"><label class="optimizer__guildBonuses__name">Health:</label></th>
+                            <td class="optimizer__guildBonuses__table__tableData"><input class="optimizer__guildBonuses__value" type="number" min="0" value="0"> %</td>
+                        </tr>
+
+                        <tr class="optimizer__guildBonuses__table__tableRow">
+                            <th class="optimizer__guildBonuses__table__tableHeading"><label class="optimizer__guildBonuses__name">Magic:</label></th>
+                            <td class="optimizer__guildBonuses__table__tableData"><input class="optimizer__guildBonuses__value" type="number"  min="0" value="0"> %</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+    
+            <article class="optimizer__collectionPercentages">
+                <div class="optimizer__collectionPercentages__container">
+                    <h3 class="optimizer__collectionPercentages__heading">Collection 1 Percentages:</h3>
+                    <table class="optimizer__collectionPercentages__table">
+                        <tbody class="optimizer__collectionPercentages__table__tableBody">
+                            <tr class="optimizer__collectionPercentages__table__tableRow">
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value1" type="number" min="0" value="0"> %</td>
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value1" type="number"  min="0" value="0"> %</td>
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value1" type="number" min="0" value="0"> %</td>
+                            </tr>
+
+                            <tr class="optimizer__collectionPercentages__table__tableRow">
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value1" type="number" min="0" value="0"> %</td>
+                                <td class="optimizer__collectionPercentages__table__tableData"></td>
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value1" type="number" min="0" value="0"> %</td>
+                            </tr>
+
+                            <tr class="optimizer__collectionPercentages__table__tableRow">
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value1" type="number" min="0" value="0"> %</td>
+                                <td class="optimizer__collectionPercentages__table__tableData"></td>
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value1" type="number" min="0" value="0"> %</td>
+                            </tr>
+
+                            <tr class="optimizer__collectionPercentages__table__tableRow">
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value1" type="number" min="0" value="0"> %</td>
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value1" type="number" min="0" value="0"> %</td>
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value1" type="number" min="0" value="0"> %</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="optimizer__collectionPercentages__container">
+                    <h3 class="optimizer__collectionPercentages__heading">Collection 2 Percentages:</h3>
+                    <table class="optimizer__collectionPercentages__table">
+                        <tbody class="optimizer__collectionPercentages__table__tableBody">
+                            <tr class="optimizer__collectionPercentages__table__tableRow">
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value2" type="number" min="0" value="0"> %</td>
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value2" type="number"  min="0" value="0"> %</td>
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value2" type="number" min="0" value="0"> %</td>
+                            </tr>
+
+                            <tr class="optimizer__collectionPercentages__table__tableRow">
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value2" type="number" min="0" value="0"> %</td>
+                                <td class="optimizer__collectionPercentages__table__tableData"></td>
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value2" type="number" min="0" value="0"> %</td>
+                            </tr>
+
+                            <tr class="optimizer__collectionPercentages__table__tableRow">
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value2" type="number" min="0" value="0"> %</td>
+                                <td class="optimizer__collectionPercentages__table__tableData"></td>
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value2" type="number" min="0" value="0"> %</td>
+                            </tr>
+
+                            <tr class="optimizer__collectionPercentages__table__tableRow">
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value2" type="number" min="0" value="0"> %</td>
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value2" type="number" min="0" value="0"> %</td>
+                                <td class="optimizer__collectionPercentages__table__tableData"><input class="optimizer__collectionPercentages__value2" type="number" min="0" value="0"> %</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+    
+            <article class="optimizer__equippedGear">
+                <h3 class="optimizer__equippedGear__heading">Equipped Gear:</h3>
+
+                <table class="optimizer__equippedGear__table">
+                    <tbody class="optimizer__equippedGear__table__tableBody">
+                        <tr class="optimizer__equippedGear__table__tableRow">
+                            <th class="optimizer__equippedGear__table__tableHeading"><label class="optimizer__equippedGear__name">Gear Piece:</label></th>
+                            <th class="optimizer__equippedGear__table__tableHeading"></th>
+                            <th class="optimizer__equippedGear__table__tableHeading"></th>
+                            <th class="optimizer__equippedGear__table__tableHeading"><label class="optimizer__equippedGear__name">Links:</label></th>
+                        </tr>
+                        
+                        <tr class="optimizer__equippedGear__table__tableRow">
+                            <td class="optimizer__equippedGear__table__tableData"><select class="optimizer__equippedGear__selection"><option class="optimizer__equippedGear__selection__option" disabled selected value>Select a Gear Piece</option></select></td>
+                            <td class="optimizer__equippedGear__table__tableData"></td>
+                            <td class="optimizer__equippedGear__table__tableData"></td>
+                            <td class="optimizer__equippedGear__table__tableData"><output class="optimizer__equippedGear__linkOutput">0</output></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            
+            <article class="optimizer__collectionGear">
+                <h3 class="optimizer__collectionGear__heading">Collections Gear:</h3>
+
+                <table class="optimizer__collectionGear__table">
+                    <tbody class="optimizer__collectionGear__table__tableBody">
+                        <tr class="optimizer__collectionGear__table__tableRow">
+                            <th class="optimizer__collectionGear__table__tableHeading"><label class="optimizer__collectionGear__name">Gear Piece:</label></th>
+                            <th class="optimizer__collectionGear__table__tableHeading"><label class="optimizer__collectionGear__name">Awake Lvl:</label></th>
+                            <th class="optimizer__collectionGear__table__tableHeading"><label class="optimizer__collectionGear__name">Boost Lvl:</label></th>
+                            <th class="optimizer__collectionGear__table__tableHeading"><label class="optimizer__collectionGear__name">Links:</label></th>
+                        </tr>
+                        
+                        <tr class="optimizer__collectionGear__table__tableRow">
+                            <td class="optimizer__collectionGear__table__tableData"><select class="optimizer__collectionGear__selection"><option class="optimizer__collectionGear__selection__option" disabled selected value>Select a Gear Piece</option></select></td>
+                            <td class="optimizer__equippedGear__table__tableData"><input class="optimizer__collectionGear__input" type="number" min="0" value="0"></td>
+                            <td class="optimizer__equippedGear__table__tableData"><input class="optimizer__collectionGear__input" type="number" min="1" value="1"></td>
+                            <td class="optimizer__collectionGear__table__tableData"><output class="optimizer__collectionGear__linkOutput">0</output></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
         </section>
+    
         <div class="noice"></div>
     </main>
 
