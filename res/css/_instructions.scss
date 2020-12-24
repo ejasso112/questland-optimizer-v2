@@ -1,0 +1,57 @@
+.instructions {
+    @extend .body;
+
+    &__container {
+        @extend .container;
+    }
+
+    &__instructions {
+        &__heading {
+            @extend .heading2;
+        }
+
+        &__step {
+            @extend .article;
+
+            &__heading {
+                @extend .heading3;
+            }
+
+            &__instruction {
+                @extend .paragraph;
+                display: list-item;
+                margin: 0 24px;
+                list-style-type: disc;
+            }
+
+            &__awake {
+                padding: 8px 0;
+                margin: 0 28px;
+
+                &__list {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    width: 100%;
+                    list-style: none;
+                }
+
+                &__item {
+                    padding: 10px 24px;
+
+                    span {
+                        color: #FDF553;
+                        text-shadow: 0 0 4px #FF0000, 0 0 10px #FF0000, 0 0 12px #FF0000;
+                    }
+                }
+            }
+        }
+    }
+
+    &__complete {
+        &__content {
+            @extend .paragraph;
+        }
+    }
+}
