@@ -18,7 +18,11 @@ $footer-padding: 72px 24px;
     padding: 72px 24px;
 }
 
-.section, .article {
+.section {
+    padding-bottom: 12px;
+}
+
+.article {
     padding: 24px;
     margin-bottom: 24px;
     background: rgba($color: #FFFFFF, $alpha: .025);
@@ -34,14 +38,21 @@ $footer-padding: 72px 24px;
 
 .heading3 {
     padding-bottom: 16px;
-    text-shadow: 0 2px 4px rgba($color: #000000, $alpha: .6);
     color: #FFFFFF;
-    font-size: 20px;
     font-weight: 500;
+    font-size: 20px;
+    text-shadow: 0 2px 4px rgba($color: #000000, $alpha: .6);
+}
+
+.heading4 {
+    padding-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .paragraph {
     padding-bottom: 14px;
     text-align: justify;
+    font-weight: 300;
     line-height: 2;
 }

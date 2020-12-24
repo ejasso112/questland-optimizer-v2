@@ -24,184 +24,196 @@
     </header>
 
     <main class="about">
-        <section class="about__about">
-            <h2 class="about__about__heading">About.</h2>
-            <article class="aboutAbout">
-                <p class="about__about__paragraph">This website was created to help Heros max out their potential power to be able to perform better in
-                    the game. This is done by moving equipped collections gear around to their
-                    best suited position and optionally also change heros' equipped gear with what has the best
-                    potential.
-                </p>
-            </article>
-        </section>
+        <div class="about__container">
+            <section class="about__about">
+                <h2 class="about__about__heading">About.</h2>
+                <article class="about__about__content">
+                    <p class="about__about__content__paragraph">This website was created to help Heros max out their potential
+                        power to be able to perform better in
+                        the game. This is done by moving equipped collections gear around to their
+                        best suited position and optionally also change heros' equipped gear with what has the best
+                        potential.
+                    </p>
+                </article>
+            </section>
 
-        <section class="about__privacy">
-            <h2 class="about__about__heading">Privacy.</h2>
-            <article class="privacy">
-                <p class="about__about__paragraph about__about__subHeading">WE DO NOT STORE ANY DATA, PERIOD.</p>
-                <p class="about__about__paragraph">We physically can't. We have nowhere to store it. We don't even have a server database to store it. So even if Justin Bieber asked nicely to see your data, we wouldn't have anything to show him.</p>
-                <p class="about__about__paragraph">That's why, with questlandOptimizer, <span>what happens on your computer stays on your computer.</span></p>
-            </article>
-            <article class="privacy">
-                <p class="about__about__paragraph about__about__subHeading">Local Storage</p>
-                <p class="about__about__paragraph"><span>Cookies</span> - A small computer file or piece of information that may be stored in user computer's hard drive when you visit our websites as browser storage.</p>
-                <p class="about__about__paragraph">This website uses cookies and browser storage to save user optimizer settings.</p>
-            </article>
-        </section>
+            <section class="about__privacy">
+                <h2 class="about__privacy__heading">Privacy.</h2>
+                <article class="about__privacy__content">
+                    <p class="about__privacy__content__heading">WE DO NOT STORE ANY DATA, PERIOD.</p>
+                    <p class="about__privacy__content__paragraph">We physically can't. We have nowhere to store it. We don't even
+                        have a server database to store it. So even if Justin Bieber asked nicely to see your data, we
+                        wouldn't have anything to show him.</p>
+                    <p class="about__privacy__content__paragraph">That's why, with questlandOptimizer, <span>what happens on your
+                            computer stays on your computer.</span></p>
+                </article>
 
-        <section class="about__changelog">
-            <h2 class="about__changelog__heading">Changelog.</h2>
-            <!-- V1.1.1 -->
-            <article class="changelog">
-                <div class="changelog__header">
-                    <h3 class="changelog__heading">v1.1.1</h3>
-                    <h4 class="changelog__subHeading">Dec 1, 2020</h4>
-                </div>
-                <ul class="changelog__list">
-                    <li class="changelog__listItem">Fixed connection to Questland API error due to API update.</li>
-                </ul>
-            </article>
+                <article class="about__privacy__content">
+                    <p class="about__privacy__content__heading">Local Storage</p>
+                    <p class="about__privacy__content__paragraph"><span>Cookies</span> - A small computer file or piece of
+                        information that may be stored in user computer's hard drive when you visit our websites as
+                        browser storage.</p>
+                    <p class="about__privacy__content__paragraph">This website uses cookies and browser storage to save user
+                        optimizer settings.</p>
+                </article>
+            </section>
 
-            <!-- V1.1.0 -->
-            <article class="changelog">
-                <div class="changelog__header">
-                    <h3 class="changelog__heading">v1.1.0</h3>
-                    <h4 class="changelog__subHeading">Jun 14, 2020</h4>
-                </div>
-                <ul class="changelog__list">
-                    <li class="changelog__listItem">Implemented a loading feature while all legendary gear pieces are being loaded.</li>
-                    <li class="changelog__listItem">Connected to Questland API for automated gear updates.</li>
-                </ul>
-            </article>
+            <section class="about__changelog">
+                <h2 class="about__changelog__heading">Changelog.</h2>
+                <!-- V1.1.1 -->
+                <article class="about__changelog__content">
+                    <div class="about__changelog__content__header">
+                        <h3 class="about__changelog__content__heading">v1.1.1</h3>
+                        <h4 class="about__changelog__content__subHeading">Dec 1, 2020</h4>
+                    </div>
+                    <ul class="about__changelog__content__list">
+                        <li class="about__changelog__content__paragraph">Fixed connection to Questland API error due to API update.</li>
+                    </ul>
+                </article>
 
-            <!-- V1.0.0 -->
-            <article class="changelog">
-                <div class="changelog__header">
-                    <h3 class="changelog__heading">v1.0.0</h3>
-                    <h4 class="changelog__subHeading">Jun 10, 2020</h4>
-                </div>
-                <ul class="changelog__list">
-                    <li class="changelog__listItem">Fully functioning Collections Optimizer.</li>
-                </ul>
-            </article>
+                <!-- V1.1.0 -->
+                <article class="about__changelog__content">
+                    <div class="about__changelog__content__header">
+                        <h3 class="about__changelog__content__heading">v1.1.0</h3>
+                        <h4 class="about__changelog__content__subHeading">Jun 14, 2020</h4>
+                    </div>
+                    <ul class="about__changelog__content__list">
+                        <li class="about__changelog__content__paragraph">Implemented a loading feature while all legendary gear pieces
+                            are being loaded.</li>
+                        <li class="about__changelog__content__paragraph">Connected to Questland API for automated gear updates.</li>
+                    </ul>
+                </article>
 
-            <!-- V0.3.1 -->
-            <article class="changelog">
-                <div class="changelog__header">
-                    <h3 class="changelog__heading">v0.3.1</h3>
-                    <h4 class="changelog__subHeading">Jun 10, 2020</h4>
-                </div>
-                <ul class="changelog__list">
-                    <li class="changelog__listItem">Fixed algorithm bug that prevented from getting the optimal setup.</li>
-                    <li class="changelog__listItem">Implemented Guild Bonuses to final calculation.</li>
-                    <li class="changelog__listItem">Added "SEA HAG'S BLESSING" gear piece.</li>
-                    <li class="changelog__listItem">Added "GRIPS OF THE DEPTHS" gear piece.</li>
-                    <li class="changelog__listItem">Added "TOME OF THE CLEAR THOUGHTS" gear piece.</li>
-                </ul>
-            </article>
-            
-             <!-- V0.3.0 -->
-             <article class="changelog">
-                <div class="changelog__header">
-                    <h3 class="changelog__heading">v0.3.0</h3>
-                    <h4 class="changelog__subHeading">Jun 9, 2020</h4>
-                </div>
-                <ul class="changelog__list">
-                    <li class="changelog__listItem">Implemented local storage.</li>
-                    <li class="changelog__listItem">Slight algorithm rework.</li>
-                </ul>
-            </article>
+                <!-- V1.0.0 -->
+                <article class="about__changelog__content">
+                    <div class="about__changelog__content__header">
+                        <h3 class="about__changelog__content__heading">v1.0.0</h3>
+                        <h4 class="about__changelog__content__subHeading">Jun 10, 2020</h4>
+                    </div>
+                    <ul class="about__changelog__content__list">
+                        <li class="about__changelog__content__paragraph">Fully functioning Collections Optimizer.</li>
+                    </ul>
+                </article>
 
-            <!-- V0.2.2 -->
-            <article class="changelog">
-                <div class="changelog__header">
-                    <h3 class="changelog__heading">v0.2.2</h3>
-                    <h4 class="changelog__subHeading">Jun 7, 2020</h4>
-                </div>
-                <ul class="changelog__list">
-                    <li class="changelog__listItem">Added "BOOMING BLADE" gear piece.</li>
-                    <li class="changelog__listItem">Added "SPHERE OF THE TEMPEST" gear piece.</li>
-                    <li class="changelog__listItem">Added "HORNET HELM" gear piece.</li>
-                    <li class="changelog__listItem">Added "JOLT OF LIGHTNING" gear piece.</li>
-                    <li class="changelog__listItem">Added "THUNDERBOLT STOMPERS" gear piece.</li>
-                    <li class="changelog__listItem">Added "GLOVES OF DEFENSE" gear piece.</li>
-                    <li class="changelog__listItem">Added "CURSED SEAFARER ARMOR" gear piece.</li>
-                    <li class="changelog__listItem">Added "SEAFARER'S SPYGLASS" gear piece.</li>
-                    <li class="changelog__listItem">Added "SEA SERPENT SIGNET" gear piece.</li>
-                </ul>
-            </article>
+                <!-- V0.3.1 -->
+                <article class="about__changelog__content">
+                    <div class="about__changelog__content__header">
+                        <h3 class="about__changelog__content__heading">v0.3.1</h3>
+                        <h4 class="about__changelog__content__subHeading">Jun 10, 2020</h4>
+                    </div>
+                    <ul class="about__changelog__content__list">
+                        <li class="about__changelog__content__paragraph">Fixed algorithm bug that prevented from getting the optimal
+                            setup.</li>
+                        <li class="about__changelog__content__paragraph">Implemented Guild Bonuses to final calculation.</li>
+                        <li class="about__changelog__content__paragraph">Added "SEA HAG'S BLESSING" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "GRIPS OF THE DEPTHS" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "TOME OF THE CLEAR THOUGHTS" gear piece.</li>
+                    </ul>
+                </article>
 
-            <!-- V0.2.1 -->
-            <article class="changelog">
-                <div class="changelog__header">
-                    <h3 class="changelog__heading">v0.2.1</h3>
-                    <h4 class="changelog__subHeading">Jun 7, 2020</h4>
-                </div>
-                <ul class="changelog__list">
-                    <li class="changelog__listItem">Minor bug fixes.</li>
-                    <li class="changelog__listItem">Minor Optimize interface update.</li>
-                </ul>
-            </article>
-            
-            <!-- V0.2.0 -->
-            <article class="changelog">
-                <div class="changelog__header">
-                    <h3 class="changelog__heading">v0.2.0</h3>
-                    <h4 class="changelog__subHeading">Jun 2, 2020</h4>
-                </div>
-                <ul class="changelog__list">
-                    <li class="changelog__listItem">Introduced the Instruction tab.</li>
-                    <li class="changelog__listItem">Introduced the Optimize tab.</li>
-                    <li class="changelog__listItem">Introduced the About tab.</li>
-                </ul>
-            </article>
+                <!-- V0.3.0 -->
+                <article class="about__changelog__content">
+                    <div class="about__changelog__content__header">
+                        <h3 class="about__changelog__content__heading">v0.3.0</h3>
+                        <h4 class="about__changelog__content__subHeading">Jun 9, 2020</h4>
+                    </div>
+                    <ul class="about__changelog__content__list">
+                        <li class="about__changelog__content__paragraph">Implemented local storage.</li>
+                        <li class="about__changelog__content__paragraph">Slight algorithm rework.</li>
+                    </ul>
+                </article>
 
-            <!-- V0.1.2 -->
-            <article class="changelog">
-                <div class="changelog__header">
-                    <h3 class="changelog__heading">v0.1.2</h3>
-                    <h4 class="changelog__subHeading">May 13, 2020</h4>
-                </div>
-                <ul class="changelog__list">
-                    <li class="changelog__listItem">Added "WARFISTS OF THUNDER" gear piece.</li>
-                    <li class="changelog__listItem">Added "HEART OF THE STORM" gear piece.</li>
-                    <li class="changelog__listItem">Added "PERIAPT OF ZEPHYR" gear piece.</li>
-                </ul>
-            </article>
+                <!-- V0.2.2 -->
+                <article class="about__changelog__content">
+                    <div class="about__changelog__content__header">
+                        <h3 class="about__changelog__content__heading">v0.2.2</h3>
+                        <h4 class="about__changelog__content__subHeading">Jun 7, 2020</h4>
+                    </div>
+                    <ul class="about__changelog__content__list">
+                        <li class="about__changelog__content__paragraph">Added "BOOMING BLADE" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "SPHERE OF THE TEMPEST" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "HORNET HELM" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "JOLT OF LIGHTNING" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "THUNDERBOLT STOMPERS" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "GLOVES OF DEFENSE" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "CURSED SEAFARER ARMOR" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "SEAFARER'S SPYGLASS" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "SEA SERPENT SIGNET" gear piece.</li>
+                    </ul>
+                </article>
 
-            <!-- V0.1.1 -->
-            <article class="changelog">
-                <div class="changelog__header">
-                    <h3 class="changelog__heading">v0.1.1</h3>
-                    <h4 class="changelog__subHeading">May 7, 2020</h4>
-                </div>
-                <ul class="changelog__list">
-                    <li class="changelog__listItem">Added "BOLT OF FURY" gear piece.</li>
-                    <li class="changelog__listItem">Added "HELM OF THE STORM" gear piece.</li>
-                    <li class="changelog__listItem">Added "FULGURE NECKLACE" gear piece.</li>
-                    <li class="changelog__listItem">Added "RING OF IGNITION" gear piece.</li>
-                    <li class="changelog__listItem">Added "VOLTARE GRIPS" gear piece.</li>
-                    <li class="changelog__listItem">Added "THUNDERLORD ARMOR" gear piece.</li>
-                    <li class="changelog__listItem">Added "BOLT BOUQUET" gear piece.</li>
-                    <li class="changelog__listItem">Added "BOLT BOOTS" gear piece.</li>
-                    <li class="changelog__listItem">Added "BOLT OF" LIGHTNING RING" gear piece.</li>
-                    <li class="changelog__listItem">Added "HEALING SPARK" gear piece.</li>
-                    <li class="changelog__listItem">Added "IGNIS PHYLACTERY" gear piece.</li>
-                    <li class="changelog__listItem">Added "KNIGHT OF THE TEMPEST ARMOR" gear piece.</li>
-                </ul>
-            </article>
+                <!-- V0.2.1 -->
+                <article class="about__changelog__content">
+                    <div class="about__changelog__content__header">
+                        <h3 class="about__changelog__content__heading">v0.2.1</h3>
+                        <h4 class="about__changelog__content__subHeading">Jun 7, 2020</h4>
+                    </div>
+                    <ul class="about__changelog__content__list">
+                        <li class="about__changelog__content__paragraph">Minor bug fixes.</li>
+                        <li class="about__changelog__content__paragraph">Minor Optimize interface update.</li>
+                    </ul>
+                </article>
 
-            <!-- V0.1.0 -->
-            <article class="changelog">
-                <div class="changelog__header">
-                    <h3 class="changelog__heading">v0.1.0</h3>
-                    <h4 class="changelog__subHeading">May 7, 2020</h4>
-                </div>
-                <ul class="changelog__list">
-                    <li class="changelog__listItem">Basic functioning Collections Optimizer.</li>
-                </ul>
-            </article>
-        </section>
+                <!-- V0.2.0 -->
+                <article class="about__changelog__content">
+                    <div class="about__changelog__content__header">
+                        <h3 class="about__changelog__content__heading">v0.2.0</h3>
+                        <h4 class="about__changelog__content__subHeading">Jun 2, 2020</h4>
+                    </div>
+                    <ul class="about__changelog__content__list">
+                        <li class="about__changelog__content__paragraph">Introduced the Instruction tab.</li>
+                        <li class="about__changelog__content__paragraph">Introduced the Optimize tab.</li>
+                        <li class="about__changelog__content__paragraph">Introduced the About tab.</li>
+                    </ul>
+                </article>
+
+                <!-- V0.1.2 -->
+                <article class="about__changelog__content">
+                    <div class="about__changelog__content__header">
+                        <h3 class="about__changelog__content__heading">v0.1.2</h3>
+                        <h4 class="about__changelog__content__subHeading">May 13, 2020</h4>
+                    </div>
+                    <ul class="about__changelog__content__list">
+                        <li class="about__changelog__content__paragraph">Added "WARFISTS OF THUNDER" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "HEART OF THE STORM" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "PERIAPT OF ZEPHYR" gear piece.</li>
+                    </ul>
+                </article>
+
+                <!-- V0.1.1 -->
+                <article class="about__changelog__content">
+                    <div class="about__changelog__content__header">
+                        <h3 class="about__changelog__content__heading">v0.1.1</h3>
+                        <h4 class="about__changelog__content__subHeading">May 7, 2020</h4>
+                    </div>
+                    <ul class="about__changelog__content__list">
+                        <li class="about__changelog__content__paragraph">Added "BOLT OF FURY" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "HELM OF THE STORM" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "FULGURE NECKLACE" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "RING OF IGNITION" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "VOLTARE GRIPS" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "THUNDERLORD ARMOR" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "BOLT BOUQUET" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "BOLT BOOTS" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "BOLT OF" LIGHTNING RING" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "HEALING SPARK" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "IGNIS PHYLACTERY" gear piece.</li>
+                        <li class="about__changelog__content__paragraph">Added "KNIGHT OF THE TEMPEST ARMOR" gear piece.</li>
+                    </ul>
+                </article>
+
+                <!-- V0.1.0 -->
+                <article class="about__changelog__content">
+                    <div class="about__changelog__content__header">
+                        <h3 class="about__changelog__content__heading">v0.1.0</h3>
+                        <h4 class="about__changelog__content__subHeading">May 7, 2020</h4>
+                    </div>
+                    <ul class="about__changelog__content__list">
+                        <li class="about__changelog__content__paragraph">Basic functioning Collections Optimizer.</li>
+                    </ul>
+                </article>
+            </section>
+        </div>
         <div class="noice"></div>
     </main>
 
