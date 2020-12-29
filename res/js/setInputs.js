@@ -154,5 +154,5 @@ const setPlayerInfo = async () => {
 }
 
 export const setInputsEventlisteners = () => {
-    document.querySelector('.optimizer__playerInfo').addEventListener('submit', setPlayerInfo)
+    document.querySelector('#playerInfo__form').addEventListener('submit', setPlayerInfo)
 }
