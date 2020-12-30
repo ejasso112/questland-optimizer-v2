@@ -177,72 +177,55 @@
                         </article>
                     </section>
 
-                    <article class="optimizer__equippedGear">
-                        <h3 class="optimizer__equippedGear__heading">Equipped Gear:</h3>
+                    <section class="optimize__optimizer__characterInfo__equippedGear">
+                        <h3 class="optimize__optimizer__characterInfo__equippedGear__heading">Equipped Gear:</h3>
 
-                        <table class="optimizer__equippedGear__table">
-                            <tbody class="optimizer__equippedGear__table__tableBody">
-                                <tr class="optimizer__equippedGear__table__tableRow">
-                                    <th class="optimizer__equippedGear__table__tableHeading"><label
-                                            class="optimizer__equippedGear__name">Gear Piece:</label></th>
-                                    <th class="optimizer__equippedGear__table__tableHeading"></th>
-                                    <th class="optimizer__equippedGear__table__tableHeading"></th>
-                                    <th class="optimizer__equippedGear__table__tableHeading"><label
-                                            class="optimizer__equippedGear__name">Links:</label></th>
-                                </tr>
+                        <div class="optimize__optimizer__characterInfo__equippedGear__content">
+                            <div class="optimize__optimizer__characterInfo__equippedGear__item">
+                                <p class="optimize__optimizer__characterInfo__equippedGear__label">Gear Piece:</p>
+                                <p class="optimize__optimizer__characterInfo__equippedGear__label">Awake Lvl:</p>
+                                <p class="optimize__optimizer__characterInfo__equippedGear__label">Links:</p>
+                            </div>
+                            <div class="optimize__optimizer__characterInfo__equippedGear__item">
+                                <p class="optimize__optimizer__characterInfo__equippedGear__field">
+                                    <select class="optimize__optimizer__characterInfo__equippedGear__select" id="equippedGear1" name="equippedGear1" aria-label="Gear Piece:">
+                                        <option class="optimize__optimizer__characterInfo__equippedGear__option" value="" disabled selected>Select a Gear Piece</option>
+                                    </select>
+                                </p>
+                                <p class="optimize__optimizer__characterInfo__equippedGear__field">
+                                    <input class="optimize__optimizer__characterInfo__equippedGear__input" id="equippedAwake1" name="equippedAwake1" aria-label="Awake Lvl:" type="number" min="0" value="0">
+                                </p>
+                                <p class="optimize__optimizer__characterInfo__equippedGear__field">
+                                    <output class="optimize__optimizer__characterInfo__equippedGear__input" id="equippedLink1" name="equippedLink1" aria-label="Links:">0</output>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
 
-                                <tr class="optimizer__equippedGear__table__tableRow">
-                                    <td class="optimizer__equippedGear__table__tableData"><select
-                                            class="optimizer__equippedGear__selection">
-                                            <option class="optimizer__equippedGear__selection__option" disabled
-                                                selected>
-                                                Select
-                                                a Gear Piece</option>
-                                        </select></td>
-                                    <td class="optimizer__equippedGear__table__tableData"></td>
-                                    <td class="optimizer__equippedGear__table__tableData"></td>
-                                    <td class="optimizer__equippedGear__table__tableData"><output
-                                            class="optimizer__equippedGear__linkOutput">0</output></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </article>
+                    <section class="optimize__optimizer__characterInfo__collectionGear">
+                        <h3 class="optimize__optimizer__characterInfo__collectionGear__heading">Equipped Gear:</h3>
 
-                    <article class="optimizer__collectionGear">
-                        <h3 class="optimizer__collectionGear__heading">Collections Gear:</h3>
-
-                        <table class="optimizer__collectionGear__table">
-                            <tbody class="optimizer__collectionGear__table__tableBody">
-                                <tr class="optimizer__collectionGear__table__tableRow">
-                                    <th class="optimizer__collectionGear__table__tableHeading"><label
-                                            class="optimizer__collectionGear__name">Gear Piece:</label></th>
-                                    <th class="optimizer__collectionGear__table__tableHeading"><label
-                                            class="optimizer__collectionGear__name">Awake Lvl:</label></th>
-                                    <th class="optimizer__collectionGear__table__tableHeading"><label
-                                            class="optimizer__collectionGear__name">Boost Lvl:</label></th>
-                                    <th class="optimizer__collectionGear__table__tableHeading"><label
-                                            class="optimizer__collectionGear__name">Links:</label></th>
-                                </tr>
-
-                                <tr class="optimizer__collectionGear__table__tableRow">
-                                    <td class="optimizer__collectionGear__table__tableData"><select
-                                            class="optimizer__collectionGear__selection">
-                                            <option class="optimizer__collectionGear__selection__option" disabled
-                                                selected>
-                                                Select a Gear Piece</option>
-                                        </select></td>
-                                    <td class="optimizer__equippedGear__table__tableData"><input
-                                            class="optimizer__collectionGear__input" type="number" min="0" value="0">
-                                    </td>
-                                    <td class="optimizer__equippedGear__table__tableData"><input
-                                            class="optimizer__collectionGear__input" type="number" min="1" value="1">
-                                    </td>
-                                    <td class="optimizer__collectionGear__table__tableData"><output
-                                            class="optimizer__collectionGear__linkOutput">0</output></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </article>
+                        <div class="optimize__optimizer__characterInfo__collectionGear__content">
+                            <div class="optimize__optimizer__characterInfo__collectionGear__item">
+                                <p class="optimize__optimizer__characterInfo__collectionGear__label">Gear Piece:</p>
+                                <p class="optimize__optimizer__characterInfo__collectionGear__label">Awake Lvl:</p>
+                                <p class="optimize__optimizer__characterInfo__collectionGear__label">Links:</p>
+                            </div>
+                            <div class="optimize__optimizer__characterInfo__collectionGear__item">
+                                <p class="optimize__optimizer__characterInfo__collectionGear__field">
+                                    <select class="optimize__optimizer__characterInfo__collectionGear__select" id="collectionGear1" name="collectionGear1" aria-label="Gear Piece:">
+                                        <option class="optimize__optimizer__characterInfo__collectionGear__option" value="" disabled selected>Select a Gear Piece</option>
+                                    </select>
+                                </p>
+                                <p class="optimize__optimizer__characterInfo__collectionGear__field">
+                                    <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake1" name="collectionAwake1" aria-label="Awake Lvl:" type="number" min="0" value="0">
+                                </p>
+                                <p class="optimize__optimizer__characterInfo__collectionGear__field">
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink1" name="collectionLink1" aria-label="Links:">0</output>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
                 </form>
             </section>
         </div>
