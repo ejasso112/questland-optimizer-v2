@@ -1,16 +1,16 @@
 import state from './state.js'
 
 //Binary Search Function to search for right gear fast
-const binarySearch = value => {
+const binarySearch = (data, property, value) => {
     let start = 0
-    let end = state.gear.length - 1
+    let end = data.length - 1
 
     while (start <= end) {
         let mid = Math.floor((start + end) / 2)
 
-        if (state.gear[mid].id === value) {
-            return state.gear[mid]
-        } else if (state.gear[mid].id < value) {
+        if (data[mid][property] === value) {
+            return data[mid]
+        } else if (data[mid][property] < value) {
             start = mid + 1
         } else {
             end = mid - 1
