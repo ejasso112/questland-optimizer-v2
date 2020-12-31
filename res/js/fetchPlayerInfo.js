@@ -1,13 +1,45 @@
 import state from './state.js'
 import binarySearch from './binarySearch.js'
 
-//Setting State though API Fetch
-const setPlayerInfo = async () => {
+const fetchPlayerInfo = async () => {
+    // Fetching Guild Data
+    const urlGuild = `https://questland-public-api-dot-questland-tools.uc.r.appspot.com/guild/${$('#guildName').val()}?server=${$('#serverName').val()}`
+    const resGuild = await fetch(urlGuild)
+    const dataGuild = await resGuild.json()
+
+    // Adding GuildBonuses to State
+    state.guildBonuses = {
+        attack: dataGuild.attackResearchLevel === null ? 0
+            : dataGuild.attackResearchLevel <= 1 ? 0
+            : dataGuild.attackResearchLevel === 2 ? 2
+            : dataGuild.attackResearchLevel === 3 ? 4
+            : dataGuild.attackResearchLevel + 2,
+
+        defense: dataGuild.defenseResearchLevel === null ? 0
+            : dataGuild.defenseResearchLevel <= 1 ? 0
+            : dataGuild.defenseResearchLevel === 2 ? 2
+            : dataGuild.defenseResearchLevel === 3 ? 4
+            : dataGuild.defenseResearchLevel + 2,
+
+        health: dataGuild.healthResearchLevel === null ? 0
+            : dataGuild.healthResearchLevel <= 1 ? 0
+            : dataGuild.healthResearchLevel === 2 ? 2
+            : dataGuild.healthResearchLevel === 3 ? 4
+            : dataGuild.healthResearchLevel + 2,
+
+        magic: dataGuild.magicResearchLevel === null ? 0
+            : dataGuild.magicResearchLevel <= 1 ? 0
+            : dataGuild.magicResearchLevel === 2 ? 2
+            : dataGuild.magicResearchLevel === 3 ? 4
+            : dataGuild.magicResearchLevel + 2,
+    }
+
     // Fetching Player Data
     const urlPlayer = `https://questland-public-api-dot-questland-tools.uc.r.appspot.com/hero/${$('#guildName').val()}/${$('#playerName').val()}?server=${$('#serverName').val()}`
     const resPlayer = await fetch(urlPlayer)
     const dataPlayer = await resPlayer.json()
-
+    
+    console.log(dataPlayer)
     // Adding Collection Percentages to State
     state.collectionPercentages = {
         slot0: { type: 'magic', value: dataPlayer.collection1Slots.slotUpgradePercentages[0] },
@@ -99,60 +131,8 @@ const setPlayerInfo = async () => {
         }
     }
     state.collectionGear = {...collection1Obj,...collection2Obj}
-
-    // Fetching Guild Data
-    const urlGuild = `https://questland-public-api-dot-questland-tools.uc.r.appspot.com/guild/${$('#guildName').val()}?server=${$('#serverName').val()}`
-    const resGuild = await fetch(urlGuild)
-    const dataGuild = await resGuild.json()
-
-    // Adding GuildBonuses to State
-    state.guildBonuses = {
-        attack:
-            dataGuild.attackResearchLevel === null
-                ? 0
-                : dataGuild.attackResearchLevel <= 1
-                ? 0
-                : dataGuild.attackResearchLevel === 2
-                ? 2
-                : dataGuild.attackResearchLevel === 3
-                ? 4
-                : dataGuild.attackResearchLevel + 2,
-
-        defense:
-            dataGuild.defenseResearchLevel === null
-                ? 0
-                : dataGuild.defenseResearchLevel <= 1
-                ? 0
-                : dataGuild.defenseResearchLevel === 2
-                ? 2
-                : dataGuild.defenseResearchLevel === 3
-                ? 4
-                : dataGuild.defenseResearchLevel + 2,
-
-        health:
-            dataGuild.healthResearchLevel === null
-                ? 0
-                : dataGuild.healthResearchLevel <= 1
-                ? 0
-                : dataGuild.healthResearchLevel === 2
-                ? 2
-                : dataGuild.healthResearchLevel === 3
-                ? 4
-                : dataGuild.healthResearchLevel + 2,
-
-        magic:
-            dataGuild.magicResearchLevel === null
-                ? 0
-                : dataGuild.magicResearchLevel <= 1
-                ? 0
-                : dataGuild.magicResearchLevel === 2
-                ? 2
-                : dataGuild.magicResearchLevel === 3
-                ? 4
-                : dataGuild.magicResearchLevel + 2,
-    }
 }
 
-export const setInputsEventlisteners = () => {
-    document.querySelector('#playerInfo__form').addEventListener('submit', setPlayerInfo)
+export const fetchPlayerInfoListener = () => {
+    document.querySelector('#playerInfo__form').addEventListener('submit', fetchPlayerInfo)
 }

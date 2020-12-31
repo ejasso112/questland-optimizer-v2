@@ -1,6 +1,6 @@
 let state = {
-    data: null,
-    sortedData: null,
+    gear: null,
+    gearSorted: null,
 
     guildBonuses: null,
     collectionPercentages: null,
