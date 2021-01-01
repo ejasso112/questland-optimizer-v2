@@ -1,6 +1,7 @@
 import state from './state.js'
 
 import fetchGearInfo from './fetchGearInfo.js'
+import fetchLocalStorage from './fetchLocalStorage.js'
 import { fetchPlayerInfoListener } from './fetchPlayerInfo.js'
 
 import setDocumentSelectors from './setDocumentSelectors.js'
@@ -22,9 +23,14 @@ const main = async () => {
     // Clone and display select element for all input fields
     await setDocumentSelectors()
 
-    // Listner to fetch Player and Guild data on button click
+    // Fetch Player data that is stored in local storage
+    await fetchLocalStorage()
+
+    // Listener to fetch Player and Guild data on button click
     fetchPlayerInfoListener()
+    // Listener to update Player and Guild data on input changes
     updateInputsEventlisteners()
+
     // Remove loading element once done loading
     $('#loading').remove()
 
