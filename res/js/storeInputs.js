@@ -15,6 +15,7 @@ const storeEquppedGear = () => {
 const storeCollectionGear = () => {
     localStorage.setItem('collectionGear', JSON.stringify(state.collectionGear))
 }
+
 export {
     storeGuildBonuses,
     storeCollectionPercentages,

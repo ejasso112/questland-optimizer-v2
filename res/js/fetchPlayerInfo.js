@@ -1,6 +1,7 @@
 import state from './state.js'
 import binarySearch from './binarySearch.js'
 import { storeGuildBonuses, storeCollectionPercentages, storeEquppedGear, storeCollectionGear } from './storeInputs.js'
+import displayInputs from './displayInputs.js'
 
 const fetchPlayerInfo = async () => {
     // Fetching Guild Data
@@ -138,6 +139,7 @@ const fetchPlayerInfo = async () => {
     }
     state.collectionGear = {...collection1Obj,...collection2Obj}
     storeCollectionGear()
+    displayInputs()
 }
 
 export const fetchPlayerInfoListener = () => {
