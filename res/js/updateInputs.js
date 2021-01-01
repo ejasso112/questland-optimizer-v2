@@ -1,5 +1,7 @@
 import state from './state.js'
 import { storeGuildBonuses, storeCollectionPercentages, storeEquppedGear, storeCollectionGear } from './storeInputs.js'
+import calcLinks from './calcLinks.js'
+import { displayLinks } from './displayInputs.js'
 
 const updateGuildBonuses = () => {
     state.guildBonuses = {
@@ -10,6 +12,7 @@ const updateGuildBonuses = () => {
     }
 
     storeGuildBonuses()
+    
 }
 
 const updateCollectionPercentages = () => {
@@ -48,8 +51,11 @@ const updateEquippedGear = (pos) => {
     const gear = awakeLvl > 0 ? state.gearSorted.filter(value => value.name === name && value.quality === artifact)[0] :
     state.gearSorted.filter(value => value.name === name && value.quality !== 'ARTIFACT1' && value.quality !== 'ARTIFACT2' && value.quality !== 'ARTIFACT3' && value.quality !== 'ARTIFACT4' && value.quality !== 'ARTIFACT5' && value.quality !== 'ARTIFACT6' && value.quality !== 'ARTIFACT7')[0]
 
+    const baseGearId = state.gearSorted.filter(value => value.name === name && value.quality !== 'ARTIFACT1' && value.quality !== 'ARTIFACT2' && value.quality !== 'ARTIFACT3' && value.quality !== 'ARTIFACT4' && value.quality !== 'ARTIFACT5' && value.quality !== 'ARTIFACT6' && value.quality !== 'ARTIFACT7')[0].id
+
     state.equppedGear[`slot${pos}`] = {
         id: gear.id,
+        baseId: baseGearId,
         value: gear.name,
         attack: gear.attack,
         defense: gear.defense,
@@ -62,9 +68,11 @@ const updateEquippedGear = (pos) => {
         itemLink3: gear.itemLink3,
         itemSlot: gear.itemSlot,
         artifact: gear.quality === 'ARTIFACT5' ? 5 : gear.quality === 'ARTIFACT4' ? 4 : gear.quality === 'ARTIFACT3' ? 3 : gear.quality === 'ARTIFACT2' ? 2 : gear.quality === 'ARTIFACT1' ? 1 : 0,
+        links: 0,
     }
-
+    calcLinks()
     storeEquppedGear()
+    displayLinks()
 }
 
 const updateCollectionGear = (pos) => {
@@ -75,9 +83,12 @@ const updateCollectionGear = (pos) => {
 
     const gear = awakeLvl > 0 ? state.gearSorted.filter(value => value.name === name && value.quality === artifact)[0] :
     state.gearSorted.filter(value => value.name === name && value.quality !== 'ARTIFACT1' && value.quality !== 'ARTIFACT2' && value.quality !== 'ARTIFACT3' && value.quality !== 'ARTIFACT4' && value.quality !== 'ARTIFACT5' && value.quality !== 'ARTIFACT6' && value.quality !== 'ARTIFACT7')[0]
-
+    
+    const baseGearId = state.gearSorted.filter(value => value.name === name && value.quality !== 'ARTIFACT1' && value.quality !== 'ARTIFACT2' && value.quality !== 'ARTIFACT3' && value.quality !== 'ARTIFACT4' && value.quality !== 'ARTIFACT5' && value.quality !== 'ARTIFACT6' && value.quality !== 'ARTIFACT7')[0].id
+    
     state.collectionGear[`slot${pos}`] = {
         id: gear.id,
+        baseId: baseGearId,
         value: gear.name,
         attack: gear.attack,
         defense: gear.defense,
@@ -90,9 +101,12 @@ const updateCollectionGear = (pos) => {
         itemLink3: gear.itemLink3,
         itemSlot: gear.itemSlot,
         artifact: gear.quality === 'ARTIFACT5' ? 5 : gear.quality === 'ARTIFACT4' ? 4 : gear.quality === 'ARTIFACT3' ? 3 : gear.quality === 'ARTIFACT2' ? 2 : gear.quality === 'ARTIFACT1' ? 1 : 0,
+        links: 0,
     }
     
+    calcLinks()      
     storeCollectionGear()
+    displayLinks()
 }
 
 export const updateInputsEventlisteners = () => {

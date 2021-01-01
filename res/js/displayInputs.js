@@ -39,15 +39,34 @@ const displayCollectionPercentages = () => {
 
 const displayEquippedGear = () => {
     for(let i = 1; i <= 7 ; i++) {
-        $(`#equippedGear${i}`).val(state.equppedGear[`slot${i}`].value)
-        $(`#equippedAwake${i}`).val(state.equppedGear[`slot${i}`].artifact)
+        if(state.equppedGear[`slot${i}`] !== null) {
+            $(`#equippedGear${i}`).val(state.equppedGear[`slot${i}`].value)
+            $(`#equippedAwake${i}`).val(state.equppedGear[`slot${i}`].artifact)
+            $(`#equippedLink${i}`).val(state.equppedGear[`slot${i}`].links)
+        }
     }
 }
 
 const displayCollectionGear = () => {
     for(let i = 1; i <= 20 ; i++) {
-        $(`#collectionGear${i}`).val(state.collectionGear[`slot${i}`].value)
-        $(`#collectionAwake${i}`).val(state.collectionGear[`slot${i}`].artifact)
+        if(state.collectionGear[`slot${i}`] !== null) {
+            $(`#collectionGear${i}`).val(state.collectionGear[`slot${i}`].value)
+            $(`#collectionAwake${i}`).val(state.collectionGear[`slot${i}`].artifact)
+            $(`#collectionLink${i}`).val(state.collectionGear[`slot${i}`].links)
+        }
+    }
+}
+
+const displayLinks = () => {
+    for(let i = 1; i <= 7 ; i++) {
+        if(state.equppedGear[`slot${i}`] !== null) {
+            $(`#equippedLink${i}`).val(state.equppedGear[`slot${i}`].links)
+        }
+    }
+    for(let i = 1; i <= 20 ; i++) {
+        if(state.collectionGear[`slot${i}`] !== null) {
+            $(`#collectionLink${i}`).val(state.collectionGear[`slot${i}`].links)
+        }
     }
 }
 
@@ -57,4 +76,5 @@ export {
     displayCollectionPercentages,
     displayEquippedGear,
     displayCollectionGear,
+    displayLinks,
 }

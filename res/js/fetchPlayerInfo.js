@@ -1,6 +1,7 @@
 import state from './state.js'
 import binarySearch from './binarySearch.js'
 import { storeGuildBonuses, storeCollectionPercentages, storeEquppedGear, storeCollectionGear } from './storeInputs.js'
+import calcLinks from './calcLinks.js'
 import displayInputs from './displayInputs.js'
 
 const fetchPlayerInfo = async () => {
@@ -73,9 +74,12 @@ const fetchPlayerInfo = async () => {
     let slotVal = 1
     for (let i = 0; i < dataPlayer.equippedGear.length; i++) {
         const gear = binarySearch(state.gear, 'id', dataPlayer.equippedGear[i].id)
+        const baseGearId = state.gearSorted.filter(value => value.name === gear.name && value.quality !== 'ARTIFACT1' && value.quality !== 'ARTIFACT2' && value.quality !== 'ARTIFACT3' && value.quality !== 'ARTIFACT4' && value.quality !== 'ARTIFACT5' && value.quality !== 'ARTIFACT6' && value.quality !== 'ARTIFACT7')[0].id
+
         if (gear.itemSlot !== 'MAIN_HAND' && gear.itemSlot !== 'OFF_HAND') {
             gearObj[`slot${slotVal}`] = {
                 id: gear.id,
+                baseId: baseGearId,
                 value: gear.name,
                 attack: gear.attack,
                 defense: gear.defense,
@@ -89,19 +93,25 @@ const fetchPlayerInfo = async () => {
                 itemSlot: gear.itemSlot,
                 artifact:
                     gear.quality === 'ARTIFACT5' ? 5 : gear.quality === 'ARTIFACT4' ? 4 : gear.quality === 'ARTIFACT3' ? 3 : gear.quality === 'ARTIFACT2' ? 2 : gear.quality === 'ARTIFACT1' ? 1 : 0,
+                links: 0,
             }
             slotVal++
         }
     }
     state.equppedGear = gearObj
+    
+    calcLinks()
     storeEquppedGear()
     
     //Adding Collection 1 Gear to State
     let collection1Obj = {}
     for (let i = 0; i < dataPlayer.collections1.length; i++) {
         const gear = binarySearch(state.gear, 'id', dataPlayer.collections1[i].id)
+        const baseGearId = state.gearSorted.filter(value => value.name === gear.name && value.quality !== 'ARTIFACT1' && value.quality !== 'ARTIFACT2' && value.quality !== 'ARTIFACT3' && value.quality !== 'ARTIFACT4' && value.quality !== 'ARTIFACT5' && value.quality !== 'ARTIFACT6' && value.quality !== 'ARTIFACT7')[0].id
+
         collection1Obj[`slot${dataPlayer.collections1[i].collectionPosition}`] = {
             id: gear.id,
+            baseId: baseGearId,
             value: gear.name,
             attack: gear.attack,
             defense: gear.defense,
@@ -114,6 +124,7 @@ const fetchPlayerInfo = async () => {
             itemLink3: gear.itemLink3,
             itemSlot: gear.itemSlot,
             artifact: gear.quality === 'ARTIFACT5' ? 5 : gear.quality === 'ARTIFACT4' ? 4 : gear.quality === 'ARTIFACT3' ? 3 : gear.quality === 'ARTIFACT2' ? 2 : gear.quality === 'ARTIFACT1' ? 1 : 0,
+            links: 0,
         }
     }
 
@@ -121,8 +132,11 @@ const fetchPlayerInfo = async () => {
     let collection2Obj = {}
     for (let i = 0; i < dataPlayer.collections2.length; i++) {
         const gear = binarySearch(state.gear, 'id', dataPlayer.collections2[i].id)
+        const baseGearId = state.gearSorted.filter(value => value.name === gear.name && value.quality !== 'ARTIFACT1' && value.quality !== 'ARTIFACT2' && value.quality !== 'ARTIFACT3' && value.quality !== 'ARTIFACT4' && value.quality !== 'ARTIFACT5' && value.quality !== 'ARTIFACT6' && value.quality !== 'ARTIFACT7')[0].id
+
         collection2Obj[`slot${dataPlayer.collections2[i].collectionPosition + 10}`] = {
             id: gear.id,
+            baseId: baseGearId,
             value: gear.name,
             attack: gear.attack,
             defense: gear.defense,
@@ -135,10 +149,15 @@ const fetchPlayerInfo = async () => {
             itemLink3: gear.itemLink3,
             itemSlot: gear.itemSlot,
             artifact: gear.quality === 'ARTIFACT5' ? 5 : gear.quality === 'ARTIFACT4' ? 4 : gear.quality === 'ARTIFACT3' ? 3 : gear.quality === 'ARTIFACT2' ? 2 : gear.quality === 'ARTIFACT1' ? 1 : 0,
+            links: 0,
         }
     }
+
     state.collectionGear = {...collection1Obj,...collection2Obj}
+    
+    calcLinks()
     storeCollectionGear()
+    
     displayInputs()
 }
 

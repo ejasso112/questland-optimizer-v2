@@ -34,7 +34,7 @@ let state = {
         slot18: null,
         slot19: null,
         slot20: null,
-    }
+    },
 }
 
 export default state
