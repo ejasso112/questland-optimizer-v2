@@ -3,7 +3,7 @@ import state from './state.js'
 import fetchGearInfo from './fetchGearInfo.js'
 import fetchLocalStorage from './fetchLocalStorage.js'
 import { fetchPlayerInfoListener } from './fetchPlayerInfo.js'
-
+import { optimizeCollectionsListener } from './optimizeCollections.js'
 import setDocumentSelectors from './setDocumentSelectors.js'
 
 import { updateInputsEventlisteners } from './updateInputs.js'
@@ -30,7 +30,7 @@ const main = async () => {
     fetchPlayerInfoListener()
     // Listener to update Player and Guild data on input changes
     updateInputsEventlisteners()
-
+    optimizeCollectionsListener()
     // Remove loading element once done loading
     $('#loading').remove()
 
