@@ -39,7 +39,7 @@
   padding: 72px 24px;
 }
 
-.section, .about__about, .about__privacy, .about__changelog, .optimize__optimizer {
+.section, .instructions__instructions, .about__about, .about__privacy, .about__changelog, .optimize__optimizer {
   padding-top: 32px;
   padding-bottom: 12px;
 }

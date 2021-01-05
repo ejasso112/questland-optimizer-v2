@@ -6,6 +6,8 @@
     }
 
     &__instructions {
+        @extend .section;
+
         &__heading {
             @extend .heading2;
         }
