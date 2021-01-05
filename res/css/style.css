@@ -13,7 +13,20 @@
   background: -webkit-gradient(linear, left top, right bottom, from(#222830), to(#161C23));
   background: linear-gradient(to bottom right, #222830, #161C23);
   min-height: 100vh;
-  padding-top: 58px;
+}
+
+.foot, .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #151A20;
 }
 
 .container, .instructions__container, .about__container, .optimize__container {
@@ -21,7 +34,13 @@
   padding: 72px 24px;
 }
 
-.section, .about__about, .about__privacy, .about__changelog, .optimize__optimizer, .optimize__optimizer__playerInfo, .optimize__optimizer__characterInfo {
+.foot__container, .footer__container {
+  max-width: 1200px;
+  padding: 72px 24px;
+}
+
+.section, .about__about, .about__privacy, .about__changelog, .optimize__optimizer {
+  padding-top: 32px;
   padding-bottom: 12px;
 }
 
@@ -55,14 +74,16 @@
 
 .paragraph, .instructions__instructions__step__instruction, .instructions__complete__content, .about__about__content__paragraph, .about__privacy__content__paragraph, .about__changelog__content__paragraph {
   padding-bottom: 14px;
-  text-align: justify;
   font-weight: 300;
   line-height: 2;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .container, .instructions__container, .about__container, .optimize__container {
-    padding: 72px 12px;
+    padding: 72px 12px 32px 12px;
+  }
+  .foot__container, .footer__container {
+    padding: 32px 12px;
   }
   .article, .instructions__instructions__step, .about__about__content, .about__privacy__content, .about__changelog__content, .optimize__optimizer__playerInfo__playerInfo, .optimize__optimizer__characterInfo__playerInfo, .optimize__optimizer__playerInfo__guildBonuses, .optimize__optimizer__characterInfo__guildBonuses, .optimize__optimizer__playerInfo__collectionPercentages__container, .optimize__optimizer__characterInfo__collectionPercentages__container, .optimize__optimizer__playerInfo__equippedGear, .optimize__optimizer__playerInfo__collectionGear, .optimize__optimizer__characterInfo__equippedGear, .optimize__optimizer__characterInfo__collectionGear {
     padding: 12px;
@@ -76,6 +97,10 @@
           box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   color: #E2E2E2;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
 }
 
 a {
@@ -94,6 +119,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -190,6 +217,15 @@ a {
   letter-spacing: 1px;
   font-size: 13px;
   color: #C7C7C7;
+}
+
+@media only screen and (max-width: 752px) {
+  .home__main__content__heading {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.4;
+    padding-bottom: 12px;
+  }
 }
 
 .instructions__instructions__step__instruction {
@@ -423,42 +459,29 @@ a {
   }
 }
 
-.footer {
+.footer__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 102px 172px;
+      grid-template-columns: 1fr 102px 172px;
+  gap: 48px;
+}
+
+.footer__content__about, .footer__content__site, .footer__content__contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #151A20;
-  padding: 72px 24px;
 }
 
-.footer__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 1600px;
-}
-
-.footer__content__block {
-  padding: 0px 48px;
-}
-
-.footer__content__about {
-  max-width: 650px;
-}
-
-.footer__content__about__heading {
+.footer__content__about__heading, .footer__content__site__heading, .footer__content__contact__heading {
   padding-bottom: 10px;
 }
 
-.footer__content__about__desc {
+.footer__content__about__desc, .footer__content__site__desc, .footer__content__contact__desc {
   padding: 6px 0px;
   text-align: justify;
   line-height: 1.5;
@@ -466,52 +489,7 @@ a {
   font-weight: 300;
 }
 
-.footer__content__site {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.footer__content__site__heading {
-  padding-bottom: 10px;
-}
-
-.footer__content__site__link {
-  padding: 6px 0px;
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.footer__content__site__link--active {
-  color: #23A8E4;
-  font-weight: 500;
-}
-
-.footer__content__site__link:hover {
-  -webkit-transition: .2s;
-  transition: .2s;
-  color: #23A8E4;
-}
-
-.footer__content__contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.footer__content__contact__heading {
-  padding-bottom: 10px;
-}
-
-.footer__content__contact__link {
+.footer__content__about__link, .footer__content__site__link, .footer__content__contact__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -526,53 +504,65 @@ a {
   font-weight: 300;
 }
 
-.footer__content__contact__link > svg {
+.footer__content__about__link--active, .footer__content__site__link--active, .footer__content__contact__link--active {
+  color: #23A8E4;
+  font-weight: 500;
+}
+
+.footer__content__about__link:hover, .footer__content__site__link:hover, .footer__content__contact__link:hover {
+  -webkit-transition: .2s;
+  transition: .2s;
+  color: #23A8E4;
+}
+
+.footer__content__about__link > svg, .footer__content__site__link > svg, .footer__content__contact__link > svg {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   fill: #E2E2E2;
 }
 
-.footer__content__contact__link > span {
+.footer__content__about__link > span, .footer__content__site__link > span, .footer__content__contact__link > span {
   padding-left: 8px;
 }
 
-.footer__content__contact__link--discord:hover > svg {
+.footer__content__about__link--discord:hover > svg, .footer__content__site__link--discord:hover > svg, .footer__content__contact__link--discord:hover > svg {
   -webkit-transition: .2s;
   transition: .2s;
   fill: #7289DA;
 }
 
-.footer__content__contact__link--discord:hover > span {
+.footer__content__about__link--discord:hover > span, .footer__content__site__link--discord:hover > span, .footer__content__contact__link--discord:hover > span {
   -webkit-transition: .2s;
   transition: .2s;
   color: #7289DA;
 }
 
-.footer__content__contact__link--github:hover > svg {
+.footer__content__about__link--github:hover > svg, .footer__content__site__link--github:hover > svg, .footer__content__contact__link--github:hover > svg {
   -webkit-transition: .2s;
   transition: .2s;
   fill: #2ebc4f;
 }
 
-.footer__content__contact__link--github:hover > span {
+.footer__content__about__link--github:hover > span, .footer__content__site__link--github:hover > span, .footer__content__contact__link--github:hover > span {
   -webkit-transition: .2s;
   transition: .2s;
   color: #2ebc4f;
 }
 
-.footer__content__contact__link--personal:hover > svg {
+.footer__content__about__link--personal:hover > svg, .footer__content__site__link--personal:hover > svg, .footer__content__contact__link--personal:hover > svg {
   -webkit-transition: .2s;
   transition: .2s;
   fill: #E31B6D;
 }
 
-.footer__content__contact__link--personal:hover > span {
+.footer__content__about__link--personal:hover > span, .footer__content__site__link--personal:hover > span, .footer__content__contact__link--personal:hover > span {
   -webkit-transition: .2s;
   transition: .2s;
   color: #E31B6D;
 }
 
 .footer__copy {
+  text-align: center;
   padding-top: 64px;
   text-transform: uppercase;
   color: #C7C7C7;
@@ -581,6 +571,20 @@ a {
 
 .footer__copy__year {
   color: #E31B6D;
+}
+
+@media only screen and (max-width: 800px) {
+  .footer__content {
+    -ms-grid-columns: (minmax(172px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(172px, 1fr));
+    gap: 24px;
+  }
+  .footer__content__about {
+    grid-column: 1 / -1;
+  }
+  .footer__copy {
+    padding-top: 32px;
+  }
 }
 
 .noice {

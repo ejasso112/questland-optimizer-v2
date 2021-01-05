@@ -1,22 +1,20 @@
 
 .footer {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    background: $secondary-background;
-    padding: $footer-padding;
+    @extend .foot;
+
+    &__container {
+        @extend .foot__container;
+    }
 
     &__content {
-        display: flex;
-        max-width: 1600px;
+        display: grid;
+        grid-template-columns: 1fr 102px 172px;
+        gap: 48px;
 
-        &__block {
-            padding: 0px 48px;
-        }
-
-        &__about {
-            max-width: 650px;
+        &__about, &__site, &__contact {
+            display: flex;
+            flex-direction: column;
+            
             &__heading {
                 padding-bottom: 10px;
             }
@@ -28,17 +26,12 @@
                 font-size: 16px;
                 font-weight: 300;
             }
-        }
 
-        &__site {
-            display: flex;
-            flex-direction: column;
-
-            &__heading {
-                padding-bottom: 10px;
-            }
-
-            &__link { 
+            &__link {
+                display: flex;
+                flex-shrink: 0;
+                align-items: center;
+                margin-bottom: 8px;
                 padding: 6px 0px;
                 font-size: 16px;
                 font-weight: 300;
@@ -52,25 +45,6 @@
                     transition: .2s;
                     color: #23A8E4;
                 }
-            }
-        }
-
-        &__contact {
-            display: flex;
-            flex-direction: column;
-
-            &__heading {
-                padding-bottom: 10px;
-            }
-
-            &__link {
-                display: flex;
-                flex-shrink: 0;
-                align-items: center;
-                margin-bottom: 8px;
-                padding: 6px 0px;
-                font-size: 16px;
-                font-weight: 300;
 
                 > svg {
                     flex-shrink: 0;
@@ -126,6 +100,7 @@
     }
 
     &__copy {
+        text-align: center;
         padding-top: 64px;
         text-transform: uppercase;
         color: #C7C7C7;
@@ -135,4 +110,22 @@
             color: #E31B6D;
         }
     }
+}
+
+@media only screen and (max-width: 800px) {
+    .footer {
+        &__content {
+            grid-template-columns: repeat(auto-fill, minmax(172px, 1fr));
+            gap: 24px;
+    
+            &__about {
+                grid-column: 1 / -1;
+            }
+        }
+
+        &__copy {
+            padding-top: 32px;
+        }
+    }
+
 }

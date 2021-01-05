@@ -14,8 +14,6 @@
         }
 
         &__playerInfo, &__characterInfo {
-            @extend .section;
-
             &__playerInfo {
                 @extend .article;
 
