@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-.body, .instructions, .about {
+.body, .instructions, .about, .optimize {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,22 +16,22 @@
   padding-top: 58px;
 }
 
-.container, .instructions__container, .about__container {
+.container, .instructions__container, .about__container, .optimize__container {
   max-width: 800px;
   padding: 72px 24px;
 }
 
-.section, .about__about, .about__privacy, .about__changelog {
+.section, .about__about, .about__privacy, .about__changelog, .optimize__optimizer, .optimize__optimizer__playerInfo, .optimize__optimizer__characterInfo {
   padding-bottom: 12px;
 }
 
-.article, .instructions__instructions__step, .about__about__content, .about__privacy__content, .about__changelog__content {
+.article, .instructions__instructions__step, .about__about__content, .about__privacy__content, .about__changelog__content, .optimize__optimizer__playerInfo__playerInfo, .optimize__optimizer__characterInfo__playerInfo, .optimize__optimizer__playerInfo__guildBonuses, .optimize__optimizer__characterInfo__guildBonuses, .optimize__optimizer__playerInfo__collectionPercentages__container, .optimize__optimizer__characterInfo__collectionPercentages__container, .optimize__optimizer__playerInfo__equippedGear, .optimize__optimizer__playerInfo__collectionGear, .optimize__optimizer__characterInfo__equippedGear, .optimize__optimizer__characterInfo__collectionGear {
   padding: 24px;
   margin-bottom: 24px;
   background: rgba(255, 255, 255, 0.025);
 }
 
-.heading2, .instructions__instructions__heading, .about__about__heading, .about__privacy__heading, .about__changelog__heading {
+.heading2, .instructions__instructions__heading, .about__about__heading, .about__privacy__heading, .about__changelog__heading, .optimize__optimizer__heading {
   padding-bottom: 18px;
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
   color: #23A8E4;
@@ -39,7 +39,7 @@
   font-weight: 600;
 }
 
-.heading3, .instructions__instructions__step__heading, .about__about__content__heading, .about__privacy__content__heading, .about__changelog__content__heading {
+.heading3, .instructions__instructions__step__heading, .about__about__content__heading, .about__privacy__content__heading, .about__changelog__content__heading, .optimize__optimizer__playerInfo__playerInfo__heading, .optimize__optimizer__characterInfo__playerInfo__heading, .optimize__optimizer__playerInfo__guildBonuses__heading, .optimize__optimizer__characterInfo__guildBonuses__heading, .optimize__optimizer__playerInfo__collectionPercentages__heading, .optimize__optimizer__characterInfo__collectionPercentages__heading, .optimize__optimizer__playerInfo__equippedGear__heading, .optimize__optimizer__playerInfo__collectionGear__heading, .optimize__optimizer__characterInfo__equippedGear__heading, .optimize__optimizer__characterInfo__collectionGear__heading {
   padding-bottom: 16px;
   color: #FFFFFF;
   font-weight: 500;
@@ -58,6 +58,15 @@
   text-align: justify;
   font-weight: 300;
   line-height: 2;
+}
+
+@media only screen and (max-width: 600px) {
+  .container, .instructions__container, .about__container, .optimize__container {
+    padding: 72px 12px;
+  }
+  .article, .instructions__instructions__step, .about__about__content, .about__privacy__content, .about__changelog__content, .optimize__optimizer__playerInfo__playerInfo, .optimize__optimizer__characterInfo__playerInfo, .optimize__optimizer__playerInfo__guildBonuses, .optimize__optimizer__characterInfo__guildBonuses, .optimize__optimizer__playerInfo__collectionPercentages__container, .optimize__optimizer__characterInfo__collectionPercentages__container, .optimize__optimizer__playerInfo__equippedGear, .optimize__optimizer__playerInfo__collectionGear, .optimize__optimizer__characterInfo__equippedGear, .optimize__optimizer__characterInfo__collectionGear {
+    padding: 12px;
+  }
 }
 
 * {
@@ -234,8 +243,119 @@ a {
   padding: 0 16px;
 }
 
-.optimize {
-  position: relative;
+.optimize__container {
+  width: 100%;
+}
+
+.optimize__optimizer__playerInfo__playerInfo__content, .optimize__optimizer__characterInfo__playerInfo__content {
+  display: -ms-grid;
+  display: grid;
+  justify-items: stretch;
+  -ms-grid-columns: (minmax(228px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
+  gap: 16px 20px;
+}
+
+.optimize__optimizer__playerInfo__playerInfo__input, .optimize__optimizer__playerInfo__playerInfo__select, .optimize__optimizer__characterInfo__playerInfo__input, .optimize__optimizer__characterInfo__playerInfo__select {
+  padding-left: 4px;
+  height: 32px;
+  color: rgba(22, 28, 35, 0.5);
+  font-size: 14px;
+  letter-spacing: .4px;
+}
+
+.optimize__optimizer__playerInfo__playerInfo__input, .optimize__optimizer__characterInfo__playerInfo__input {
+  width: 100%;
+}
+
+.optimize__optimizer__playerInfo__playerInfo__select, .optimize__optimizer__characterInfo__playerInfo__select {
+  width: 152px;
+}
+
+.optimize__optimizer__playerInfo__playerInfo__option, .optimize__optimizer__characterInfo__playerInfo__option {
+  color: rgba(22, 28, 35, 0.5);
+}
+
+.optimize__optimizer__playerInfo__guildBonuses__content, .optimize__optimizer__characterInfo__guildBonuses__content {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-grid-columns: (minmax(152px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(152px, 1fr));
+  gap: 16px 20px;
+}
+
+.optimize__optimizer__playerInfo__guildBonuses__field, .optimize__optimizer__characterInfo__guildBonuses__field {
+  white-space: nowrap;
+}
+
+.optimize__optimizer__playerInfo__guildBonuses__input, .optimize__optimizer__characterInfo__guildBonuses__input {
+  max-width: 64px;
+  padding-left: 4px;
+  height: 32px;
+  color: rgba(22, 28, 35, 0.5);
+  font-size: 14px;
+}
+
+.optimize__optimizer__playerInfo__collectionPercentages, .optimize__optimizer__characterInfo__collectionPercentages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.optimize__optimizer__playerInfo__collectionPercentages__container, .optimize__optimizer__characterInfo__collectionPercentages__container {
+  width: 100%;
+}
+
+.optimize__optimizer__playerInfo__collectionPercentages__content, .optimize__optimizer__characterInfo__collectionPercentages__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  gap: 12px 8px;
+}
+
+.optimize__optimizer__playerInfo__collectionPercentages__input, .optimize__optimizer__characterInfo__collectionPercentages__input {
+  width: 70%;
+  padding-left: 4px;
+  height: 32px;
+  color: rgba(22, 28, 35, 0.5);
+  font-size: 14px;
+}
+
+.optimize__optimizer__playerInfo__equippedGear__content, .optimize__optimizer__playerInfo__collectionGear__content, .optimize__optimizer__characterInfo__equippedGear__content, .optimize__optimizer__characterInfo__collectionGear__content {
+  display: -ms-grid;
+  display: grid;
+  gap: 16px 20px;
+}
+
+.optimize__optimizer__playerInfo__equippedGear__item, .optimize__optimizer__playerInfo__collectionGear__item, .optimize__optimizer__characterInfo__equippedGear__item, .optimize__optimizer__characterInfo__collectionGear__item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr 1fr;
+      grid-template-columns: 3fr 1fr 1fr;
+  gap: 16px 20px;
+}
+
+.optimize__optimizer__playerInfo__equippedGear__input, .optimize__optimizer__playerInfo__equippedGear__select, .optimize__optimizer__playerInfo__collectionGear__input, .optimize__optimizer__playerInfo__collectionGear__select, .optimize__optimizer__characterInfo__equippedGear__input, .optimize__optimizer__characterInfo__equippedGear__select, .optimize__optimizer__characterInfo__collectionGear__input, .optimize__optimizer__characterInfo__collectionGear__select {
+  width: 100%;
+  padding-left: 4px;
+  height: 32px;
+  color: rgba(22, 28, 35, 0.5);
+  font-size: 14px;
+}
+
+.optimize__optimizer__playerInfo__equippedGear__input, .optimize__optimizer__playerInfo__collectionGear__input, .optimize__optimizer__characterInfo__equippedGear__input, .optimize__optimizer__characterInfo__collectionGear__input {
+  width: 80%;
+}
+
+.optimize__optimizer__playerInfo__equippedGear__field:last-child, .optimize__optimizer__playerInfo__equippedGear__label:last-child, .optimize__optimizer__playerInfo__collectionGear__field:last-child, .optimize__optimizer__playerInfo__collectionGear__label:last-child, .optimize__optimizer__characterInfo__equippedGear__field:last-child, .optimize__optimizer__characterInfo__equippedGear__label:last-child, .optimize__optimizer__characterInfo__collectionGear__field:last-child, .optimize__optimizer__characterInfo__collectionGear__label:last-child {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.optimize__optimizer__playerInfo__submit, .optimize__optimizer__characterInfo__submit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,9 +369,58 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 128px 24px;
-  background: -webkit-gradient(linear, left top, right bottom, from(#222830), to(#161C23));
-  background: linear-gradient(to bottom right, #222830, #161C23);
+  padding-bottom: 48px;
+}
+
+.optimize__optimizer__playerInfo__submit__button, .optimize__optimizer__characterInfo__submit__button {
+  border: none;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  padding: 16px 24px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#23A8E4), to(#1594CE));
+  background: linear-gradient(to bottom right, #23A8E4, #1594CE);
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 13px;
+  color: #FFFFFF;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.optimize__optimizer__playerInfo__submit__button:focus, .optimize__optimizer__characterInfo__submit__button:focus {
+  outline: 0;
+}
+
+.optimize__optimizer__playerInfo__submit__button:hover, .optimize__optimizer__characterInfo__submit__button:hover {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+  -webkit-box-shadow: 0 7px #999;
+          box-shadow: 0 7px #999;
+}
+
+.optimize__optimizer__playerInfo__submit__button:active, .optimize__optimizer__characterInfo__submit__button:active {
+  background-color: #3e8e41;
+  -webkit-box-shadow: 0 3px #666;
+          box-shadow: 0 3px #666;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.optimize__optimizer__playerInfo__submit__loading, .optimize__optimizer__playerInfo__submit__loaded, .optimize__optimizer__characterInfo__submit__loading, .optimize__optimizer__characterInfo__submit__loaded {
+  display: none;
+  padding-top: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .optimize__optimizer__characterInfo__collectionPercentages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 20px;
+  }
 }
 
 .footer {

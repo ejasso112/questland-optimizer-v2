@@ -5,6 +5,9 @@ import calcLinks from './calcLinks.js'
 import displayInputs from './displayInputs.js'
 
 const fetchPlayerInfo = async () => {
+    //Display Loading
+    $("#playerInfoLoading").css("display", "inline")
+
     // Fetching Guild Data
     const urlGuild = `https://questland-public-api-dot-questland-tools.uc.r.appspot.com/guild/${$('#guildName').val()}?server=${$('#serverName').val()}`
     const resGuild = await fetch(urlGuild)
@@ -100,8 +103,7 @@ const fetchPlayerInfo = async () => {
     }
     state.equppedGear = gearObj
     
-    calcLinks()
-    storeEquppedGear()
+    await calcLinks()
     
     //Adding Collection 1 Gear to State
     let collection1Obj = {}
@@ -155,10 +157,16 @@ const fetchPlayerInfo = async () => {
 
     state.collectionGear = {...collection1Obj,...collection2Obj}
     
-    calcLinks()
+    await calcLinks()
+    
+    storeEquppedGear()
     storeCollectionGear()
     
     displayInputs()
+    
+    //Display Loaded
+    $("#playerInfoLoading").css("display", "none")
+    $("#playerInfoLoaded").css("display", "inline")
 }
 
 export const fetchPlayerInfoListener = () => {

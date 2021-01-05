@@ -56,3 +56,13 @@ $footer-padding: 72px 24px;
     font-weight: 300;
     line-height: 2;
 }
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 72px 12px;
+    }
+    
+    .article {
+        padding: 12px;
+    }
+  }

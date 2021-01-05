@@ -110,12 +110,16 @@ const updateCollectionGear = (pos) => {
 }
 
 export const updateInputsEventlisteners = () => {
-    document.querySelectorAll('.optimize__optimizer__characterInfo__guildBonuses__input').forEach(item => {
-        item.addEventListener('change', updateGuildBonuses)
-    })
-    document.querySelectorAll('.optimize__optimizer__characterInfo__collectionPercentages__input').forEach(item => {
-        item.addEventListener('change', updateCollectionPercentages)
-    })
+    document.querySelector('#attackGuildBonus').addEventListener('change', updateGuildBonuses)
+    document.querySelector('#defenseGuildBonus').addEventListener('change', updateGuildBonuses)
+    document.querySelector('#healthGuildBonus').addEventListener('change', updateGuildBonuses)
+    document.querySelector('#magicGuildBonus').addEventListener('change', updateGuildBonuses)
+
+    for(let i = 1; i <= 10; i++) {
+        document.querySelector(`#collection1Item${i}`).addEventListener('change', updateCollectionPercentages)
+        document.querySelector(`#collection2Item${i}`).addEventListener('change', updateCollectionPercentages)
+    }
+
     for(let i = 1; i <= 7; i++) {
         document.querySelector(`#equippedGear${i}`).addEventListener('change', () => updateEquippedGear(i))
         document.querySelector(`#equippedAwake${i}`).addEventListener('change', () => updateEquippedGear(i))

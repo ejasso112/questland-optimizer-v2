@@ -1,9 +1,211 @@
 .optimize {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 128px 24px;
-    background: linear-gradient(to bottom right, #222830, #161C23);
+    @extend .body;
+
+    &__container {
+        @extend .container;
+        width: 100%;
+    }
+
+    &__optimizer {
+        @extend .section;
+
+        &__heading {
+            @extend .heading2;
+        }
+
+        &__playerInfo, &__characterInfo {
+            @extend .section;
+
+            &__playerInfo {
+                @extend .article;
+
+                &__heading {
+                    @extend .heading3;
+                }
+
+                &__content {
+                    display: grid;
+                    justify-items: stretch;
+                    grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
+                    gap: 16px 20px;
+                }
+
+                &__input, &__select {
+                    padding-left: 4px;
+                    height: 32px;
+                    color: rgba($color: #161C23, $alpha: 0.5);
+                    font-size: 14px;
+                    letter-spacing: .4px;
+                }
+
+                &__input { 
+                    width: 100%;
+                }
+
+                &__select { 
+                    width: 152px;
+                }
+
+                &__option {
+                    color: rgba($color: #161C23, $alpha: 0.5);
+                }
+            }
+
+            &__guildBonuses {
+                @extend .article;
+
+                &__heading {
+                    @extend .heading3;
+                }
+
+                &__content {
+                    display: grid;
+                    justify-items: center;
+                    grid-template-columns: repeat(auto-fit, minmax(152px, 1fr));
+                    gap: 16px 20px;
+                }
+                
+                &__field {
+                    white-space: nowrap;
+                }
+
+                &__input {
+                    max-width: 64px;
+                    padding-left: 4px;
+                    height: 32px;
+                    color: rgba($color: #161C23, $alpha: 0.5);
+                    font-size: 14px;
+                }
+            }
+
+            &__collectionPercentages {
+                display: flex;
+                gap: 20px;
+
+                &__container {
+                    width: 100%;
+                    @extend .article;
+                }
+
+                &__heading {
+                    @extend .heading3;
+                }
+
+                &__content {
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    gap: 12px 8px;
+                }
+
+                &__input {
+                    width: 70%;
+                    padding-left: 4px;
+                    height: 32px;
+                    color: rgba($color: #161C23, $alpha: 0.5);
+                    font-size: 14px;
+                }
+            }
+
+            &__equippedGear, &__collectionGear {
+                @extend .article;
+
+                &__heading {
+                    @extend .heading3;
+                }
+
+                &__content {
+                    display: grid;
+                    gap: 16px 20px;
+                }
+
+                &__item {
+                    display: grid;
+                    grid-template-columns: 3fr 1fr 1fr;
+                    gap: 16px 20px;
+                }
+
+                &__input, &__select {
+                    width: 100%;
+                    padding-left: 4px;
+                    height: 32px;
+                    color: rgba($color: #161C23, $alpha: 0.5);
+                    font-size: 14px;
+                }
+
+                &__input {
+                    width: 80%;
+                }
+
+                &__field:last-child, &__label:last-child {
+                    justify-self: end;
+                }
+            }
+            
+            &__collectionGear {
+                @extend .article;
+
+                &__heading {
+                    @extend .heading3;
+                }
+            }
+
+            &__submit {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 48px;
+
+                &__button {
+                    
+                    border:none;
+                    text-shadow: 0 3px 6px rgba($color: #000000, $alpha: .6);
+                    border-radius: 16px;
+                    padding: 16px 24px;
+                    background: linear-gradient(to bottom right, #23A8E4, #1594CE);
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                    font-size: 13px;
+                    color: #FFFFFF;
+                    cursor: pointer;
+                    transition: .2s;
+
+                    &:focus {
+                        outline: 0;
+                    }
+
+                    &:hover {
+                        
+                        transform: translateY(-7px);
+                        box-shadow: 0 7px #999;
+                    }
+
+                    &:active {
+                        background-color: #3e8e41;
+                        box-shadow: 0 3px #666;
+                        transform: translateY(-3px);
+                    }
+                }
+
+                &__loading, &__loaded {
+                    display: none;
+                    padding-top: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .optimize {
+        &__optimizer {
+            &__characterInfo {
+                &__collectionPercentages {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }  
+            }
+        }
+    }
 }

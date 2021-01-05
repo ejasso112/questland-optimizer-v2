@@ -1,6 +1,6 @@
 import state from './state.js'
 
-const calcLinks = () => {
+const calcLinks = async () => {
     for (let i = 1; i <= 27; i++) {
         let links = 0
         let currGear

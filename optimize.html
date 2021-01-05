@@ -35,15 +35,15 @@
                         <h3 class="optimize__optimizer__playerInfo__playerInfo__heading">Player Information</h3>
                         <div class="optimize__optimizer__playerInfo__playerInfo__content">
                             <p class="optimize__optimizer__playerInfo__playerInfo__field">
-                                <label class="optimize__optimizer__playerInfo__playerInfo__label" for="playerName">Player Name:</label>
+                                <label class="optimize__optimizer__playerInfo__playerInfo__label" for="playerName">Player Name:</label><br />
                                 <input class="optimize__optimizer__playerInfo__playerInfo__input" id="playerName" name="playerName" type="text" required>
                             </p>
                             <p class="optimize__optimizer__playerInfo__playerInfo__field">
-                                <label class="optimize__optimizer__playerInfo__playerInfo__label" for="guildName">Guild Name:</label>
+                                <label class="optimize__optimizer__playerInfo__playerInfo__label" for="guildName">Guild Name:</label><br />
                                 <input class="optimize__optimizer__playerInfo__playerInfo__input" id="guildName" name="guildName" type="text" required>
                             </p>
                             <p class="optimize__optimizer__playerInfo__playerInfo__field">
-                                <label class="optimize__optimizer__playerInfo__playerInfo__label" for="serverName">Server:</label>
+                                <label class="optimize__optimizer__playerInfo__playerInfo__label" for="serverName">Server:</label><br />
                                 <select class="optimize__optimizer__playerInfo__playerInfo__select" id="serverName" name="serverName" required>
                                     <option class="optimize__optimizer__playerInfo__playerInfo__option" value="">Select Server</option>
                                     <option class="optimize__optimizer__playerInfo__playerInfo__option" value="AMERICA">America</option>
@@ -55,9 +55,14 @@
                             </p>
                         </div>
                     </section>
-                    <section class="optimizer__playerInfo__submit">
-                        <p class="optimizer__playerInfo__submit__field">
-                            <button class="optimizer__playerInfo__submit__button" type="submit">Retrive Data</button>
+                    <section class="optimize__optimizer__playerInfo__submit">
+                        <p class="optimize__optimizer__playerInfo__submit__field">
+                            <button class="optimize__optimizer__playerInfo__submit__button" type="submit">Retrive Data</button>
+                        </p>
+                        <p class="optimize__optimizer__playerInfo__submit__loading" id="playerInfoLoading">
+                        </p>
+                        <p class="optimize__optimizer__playerInfo__submit__loaded" id="playerInfoLoaded">
+                            Player Info Retrived!
                         </p>
                     </section>
                 </form>
@@ -191,7 +196,7 @@
                                     <input class="optimize__optimizer__characterInfo__equippedGear__input" id="equippedAwake1" name="equippedAwake1" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__equippedGear__field">
-                                    <output class="optimize__optimizer__characterInfo__equippedGear__input" id="equippedLink1" name="equippedLink1" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__equippedGear__output" id="equippedLink1" name="equippedLink1" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__equippedGear__item">
@@ -201,7 +206,7 @@
                                     <input class="optimize__optimizer__characterInfo__equippedGear__input" id="equippedAwake2" name="equippedAwake2" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__equippedGear__field">
-                                    <output class="optimize__optimizer__characterInfo__equippedGear__input" id="equippedLink2" name="equippedLink2" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__equippedGear__output" id="equippedLink2" name="equippedLink2" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__equippedGear__item">
@@ -211,7 +216,7 @@
                                     <input class="optimize__optimizer__characterInfo__equippedGear__input" id="equippedAwake3" name="equippedAwake3" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__equippedGear__field">
-                                    <output class="optimize__optimizer__characterInfo__equippedGear__input" id="equippedLink3" name="equippedLink3" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__equippedGear__output" id="equippedLink3" name="equippedLink3" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__equippedGear__item">
@@ -221,7 +226,7 @@
                                     <input class="optimize__optimizer__characterInfo__equippedGear__input" id="equippedAwake4" name="equippedAwake4" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__equippedGear__field">
-                                    <output class="optimize__optimizer__characterInfo__equippedGear__input" id="equippedLink4" name="equippedLink4" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__equippedGear__output" id="equippedLink4" name="equippedLink4" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__equippedGear__item">
@@ -231,7 +236,7 @@
                                     <input class="optimize__optimizer__characterInfo__equippedGear__input" id="equippedAwake5" name="equippedAwake5" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__equippedGear__field">
-                                    <output class="optimize__optimizer__characterInfo__equippedGear__input" id="equippedLink5" name="equippedLink5" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__equippedGear__output" id="equippedLink5" name="equippedLink5" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__equippedGear__item">
@@ -241,7 +246,7 @@
                                     <input class="optimize__optimizer__characterInfo__equippedGear__input" id="equippedAwake6" name="equippedAwake6" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__equippedGear__field">
-                                    <output class="optimize__optimizer__characterInfo__equippedGear__input" id="equippedLink6" name="equippedLink6" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__equippedGear__output" id="equippedLink6" name="equippedLink6" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__equippedGear__item">
@@ -251,7 +256,7 @@
                                     <input class="optimize__optimizer__characterInfo__equippedGear__input" id="equippedAwake7" name="equippedAwake7" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__equippedGear__field">
-                                    <output class="optimize__optimizer__characterInfo__equippedGear__input" id="equippedLink7" name="equippedLink7" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__equippedGear__output" id="equippedLink7" name="equippedLink7" aria-label="Links:">0</output>
                                 </p>
                             </div>
                         </div>
@@ -273,7 +278,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake1" name="collectionAwake1" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink1" name="collectionLink1" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink1" name="collectionLink1" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -283,7 +288,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake2" name="collectionAwake2" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink2" name="collectionLink2" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink2" name="collectionLink2" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -293,7 +298,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake3" name="collectionAwake3" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink3" name="collectionLink3" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink3" name="collectionLink3" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -303,7 +308,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake4" name="collectionAwake4" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink4" name="collectionLink4" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink4" name="collectionLink4" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -313,7 +318,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake5" name="collectionAwake5" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink5" name="collectionLink5" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink5" name="collectionLink5" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -323,7 +328,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake6" name="collectionAwake6" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink6" name="collectionLink6" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink6" name="collectionLink6" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -333,7 +338,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake7" name="collectionAwake7" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink7" name="collectionLink7" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink7" name="collectionLink7" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -343,7 +348,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake8" name="collectionAwake8" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink8" name="collectionLink8" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink8" name="collectionLink8" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -353,7 +358,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake9" name="collectionAwake9" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink9" name="collectionLink9" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink9" name="collectionLink9" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -363,7 +368,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake10" name="collectionAwake10" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink10" name="collectionLink10" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink10" name="collectionLink10" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -373,7 +378,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake11" name="collectionAwake11" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink11" name="collectionLink11" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink11" name="collectionLink11" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -383,7 +388,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake12" name="collectionAwake12" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink12" name="collectionLink12" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink12" name="collectionLink12" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -393,7 +398,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake13" name="collectionAwake13" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink13" name="collectionLink13" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink13" name="collectionLink13" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -403,7 +408,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake14" name="collectionAwake14" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink14" name="collectionLink14" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink14" name="collectionLink14" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -413,7 +418,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake15" name="collectionAwake15" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink15" name="collectionLink15" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink15" name="collectionLink15" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -423,7 +428,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake16" name="collectionAwake16" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink16" name="collectionLink16" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink16" name="collectionLink16" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -433,7 +438,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake17" name="collectionAwake17" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink17" name="collectionLink17" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink17" name="collectionLink17" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -443,7 +448,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake18" name="collectionAwake18" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink18" name="collectionLink18" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink18" name="collectionLink18" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -453,7 +458,7 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake19" name="collectionAwake19" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink19" name="collectionLink19" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink19" name="collectionLink19" aria-label="Links:">0</output>
                                 </p>
                             </div>
                             <div class="optimize__optimizer__characterInfo__collectionGear__item">
@@ -463,14 +468,14 @@
                                     <input class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionAwake20" name="collectionAwake20" aria-label="Awake Lvl:" type="number" min="0" value="0">
                                 </p>
                                 <p class="optimize__optimizer__characterInfo__collectionGear__field">
-                                    <output class="optimize__optimizer__characterInfo__collectionGear__input" id="collectionLink20" name="collectionLink20" aria-label="Links:">0</output>
+                                    <output class="optimize__optimizer__characterInfo__collectionGear__output" id="collectionLink20" name="collectionLink20" aria-label="Links:">0</output>
                                 </p>
                             </div>
                         </div>
                     </section>
-                    <section class="optimizer__characterInfo__submit">
-                        <p class="optimizer__characterInfo__submit__field">
-                            <button class="optimizer__characterInfo__submit__button" type="submit">Optimize</button>
+                    <section class="optimize__optimizer__characterInfo__submit">
+                        <p class="optimize__optimizer__characterInfo__submit__field">
+                            <button class="optimize__optimizer__characterInfo__submit__button" type="submit">Optimize</button>
                         </p>
                     </section>
                 </form>
