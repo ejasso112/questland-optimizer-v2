@@ -35,11 +35,6 @@ const main = async () => {
     $('#loading').remove()
     $('.optimize__container').css('filter', 'none')
     $('.optimize__container').css('pointer-events', 'visible')
-
-    // Test Data
-    $('#playerName').val('TOXICB3AST')
-    $('#guildName').val('I Want Moore')
-    $('#serverName').val('AMERICA')
 }
 
 main()
