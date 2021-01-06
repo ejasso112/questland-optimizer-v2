@@ -1,32 +1,25 @@
 .home {
-    &__main {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: linear-gradient(to bottom right, #222830, #161C23);
+    @extend .body;
+
+    &__container {
+        @extend .mainContainer;
+        height: 100%;
+    }
+
+    &__banner {
+        @extend .section;
+
+        &__heading {
+            @extend .heading1;
+        }
 
         &__content {
-            max-width: 1020px;
-            padding-bottom: 64px;
-
             &__heading {
-                text-shadow: 0 3px 6px rgba($color: #000000, $alpha: .6);
-                color: #23A8E4;
-                font-size: 64px;
-                font-weight: 900;
-                line-height: 1.4;
-                padding-bottom: 12px;
-            }
-
-            &__subHeading {
                 color: #C7C7C7;
-                font-size: 18px;
+                font-size: 17px;
                 font-weight: 300;
                 line-height: 2.2;
                 letter-spacing: 1px;
-
             }
 
             &__buttons {
@@ -51,6 +44,31 @@
                 letter-spacing: 1px;
                 font-size: 13px;
                 color: #C7C7C7;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .home {
+        &__banner {
+            &__content {
+                &__heading {
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 1.5;
+                    letter-spacing: .6px;
+                }
+
+                &__callToAction {
+                    font-size: 12px;
+                    padding: 12px 20px;
+                }
+    
+                &__subButton {
+                    font-size: 12px;
+                    padding: 12px 20px;
+                }
             }
         }
     }
