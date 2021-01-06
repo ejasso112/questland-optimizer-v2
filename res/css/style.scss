@@ -14,6 +14,7 @@
 body {
     -webkit-text-size-adjust: 100%;
 }
+
 a {
     text-decoration: none;
 }
@@ -26,6 +27,9 @@ a {
 @import 'optimize';
 @import 'footer';
 
+.hidden {
+    visibility: hidden;
+}
 .noice {
     pointer-events: none;
     position: absolute;

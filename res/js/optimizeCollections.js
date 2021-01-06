@@ -4,6 +4,7 @@ import calcCollectionGearFinalStats from './calcCollectionGearFinalStats.js'
 const OptimizeCollections = () => {
     calcCollectionGearFinalStats(state.collectionGear)
     optiomizeCollectionMaxPower()
+    displayResults()
 }
 
 const optiomizeCollectionMaxPower = () => {
@@ -66,6 +67,13 @@ const swapGear = (currSlot, otherSlot) => {
     }
     else {
         return false
+    }
+}
+
+const displayResults = () => {
+    for(let i = 1; i <=10; i++) {
+        $(`#collection1Result${i}`).val(state.collectionGearFinalStats[`slot${i}`].value)
+        $(`#collection2Result${i}`).val(state.collectionGearFinalStats[`slot${i + 10}`].value)
     }
 }
 

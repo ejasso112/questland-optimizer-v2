@@ -91,24 +91,24 @@ $footer-padding: 72px 24px;
 
 @media only screen and (max-width: 800px) {
     .article {
-        padding: 12px;
+        padding: 8px;
         margin-bottom: 12px;
     }
     
     .navContainer {
-        padding: 6px 12px;
+        padding: 6px 8px;
     }
 
     .container {
-        padding: 72px 12px 32px 12px;
+        padding: 72px 8px 32px 8px;
     }
 
     .mainContainer {
-        padding: 72px 12px 72px 12px;
+        padding: 72px 8px 72px 8px;
     }
 
     .footContainer {
-        padding: 32px 12px;
+        padding: 32px 8px;
     }
     
     .heading1 {
@@ -129,10 +129,6 @@ $footer-padding: 72px 24px;
     .heading4 {
         font-weight: 400;
         font-size: 16px;
-    }
-
-    .article {
-        padding: 12px;
     }
 }
 

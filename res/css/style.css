@@ -54,7 +54,7 @@
   padding-bottom: 12px;
 }
 
-.article, .instructions__instructions__step, .about__about__content, .about__privacy__content, .about__changelog__content, .optimize__optimizer__playerInfo__playerInfo, .optimize__optimizer__characterInfo__playerInfo, .optimize__optimizer__playerInfo__guildBonuses, .optimize__optimizer__characterInfo__guildBonuses, .optimize__optimizer__playerInfo__collectionPercentages__container, .optimize__optimizer__characterInfo__collectionPercentages__container, .optimize__optimizer__playerInfo__equippedGear, .optimize__optimizer__playerInfo__collectionGear, .optimize__optimizer__characterInfo__equippedGear, .optimize__optimizer__characterInfo__collectionGear {
+.article, .instructions__instructions__step, .about__about__content, .about__privacy__content, .about__changelog__content, .optimize__optimizer__playerInfo__playerInfo, .optimize__optimizer__characterInfo__playerInfo, .optimize__optimizer__playerInfo__guildBonuses, .optimize__optimizer__characterInfo__guildBonuses, .optimize__optimizer__playerInfo__collectionPercentages__container, .optimize__optimizer__characterInfo__collectionPercentages__container, .optimize__optimizer__playerInfo__equippedGear, .optimize__optimizer__playerInfo__collectionGear, .optimize__optimizer__characterInfo__equippedGear, .optimize__optimizer__characterInfo__collectionGear, .optimize__optimizer__playerInfo__results__container, .optimize__optimizer__characterInfo__results__container {
   padding: 24px;
   margin-bottom: 24px;
   background: rgba(255, 255, 255, 0.025);
@@ -77,7 +77,7 @@
   font-weight: 600;
 }
 
-.heading3, .instructions__instructions__step__heading, .about__about__content__heading, .about__privacy__content__heading, .about__changelog__content__heading, .optimize__optimizer__playerInfo__playerInfo__heading, .optimize__optimizer__characterInfo__playerInfo__heading, .optimize__optimizer__playerInfo__guildBonuses__heading, .optimize__optimizer__characterInfo__guildBonuses__heading, .optimize__optimizer__playerInfo__collectionPercentages__heading, .optimize__optimizer__characterInfo__collectionPercentages__heading, .optimize__optimizer__playerInfo__equippedGear__heading, .optimize__optimizer__playerInfo__collectionGear__heading, .optimize__optimizer__characterInfo__equippedGear__heading, .optimize__optimizer__characterInfo__collectionGear__heading {
+.heading3, .instructions__instructions__step__heading, .about__about__content__heading, .about__privacy__content__heading, .about__changelog__content__heading, .optimize__optimizer__playerInfo__playerInfo__heading, .optimize__optimizer__characterInfo__playerInfo__heading, .optimize__optimizer__playerInfo__guildBonuses__heading, .optimize__optimizer__characterInfo__guildBonuses__heading, .optimize__optimizer__playerInfo__collectionPercentages__heading, .optimize__optimizer__characterInfo__collectionPercentages__heading, .optimize__optimizer__playerInfo__equippedGear__heading, .optimize__optimizer__playerInfo__collectionGear__heading, .optimize__optimizer__characterInfo__equippedGear__heading, .optimize__optimizer__characterInfo__collectionGear__heading, .optimize__optimizer__playerInfo__results__heading, .optimize__optimizer__characterInfo__results__heading {
   padding-bottom: 16px;
   color: #FFFFFF;
   font-weight: 500;
@@ -98,21 +98,21 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .article, .instructions__instructions__step, .about__about__content, .about__privacy__content, .about__changelog__content, .optimize__optimizer__playerInfo__playerInfo, .optimize__optimizer__characterInfo__playerInfo, .optimize__optimizer__playerInfo__guildBonuses, .optimize__optimizer__characterInfo__guildBonuses, .optimize__optimizer__playerInfo__collectionPercentages__container, .optimize__optimizer__characterInfo__collectionPercentages__container, .optimize__optimizer__playerInfo__equippedGear, .optimize__optimizer__playerInfo__collectionGear, .optimize__optimizer__characterInfo__equippedGear, .optimize__optimizer__characterInfo__collectionGear {
-    padding: 12px;
+  .article, .instructions__instructions__step, .about__about__content, .about__privacy__content, .about__changelog__content, .optimize__optimizer__playerInfo__playerInfo, .optimize__optimizer__characterInfo__playerInfo, .optimize__optimizer__playerInfo__guildBonuses, .optimize__optimizer__characterInfo__guildBonuses, .optimize__optimizer__playerInfo__collectionPercentages__container, .optimize__optimizer__characterInfo__collectionPercentages__container, .optimize__optimizer__playerInfo__equippedGear, .optimize__optimizer__playerInfo__collectionGear, .optimize__optimizer__characterInfo__equippedGear, .optimize__optimizer__characterInfo__collectionGear, .optimize__optimizer__playerInfo__results__container, .optimize__optimizer__characterInfo__results__container {
+    padding: 8px;
     margin-bottom: 12px;
   }
   .navContainer, .header__container {
-    padding: 6px 12px;
+    padding: 6px 8px;
   }
   .container, .instructions__container, .about__container, .optimize__container {
-    padding: 72px 12px 32px 12px;
+    padding: 72px 8px 32px 8px;
   }
   .mainContainer, .home__container {
-    padding: 72px 12px 72px 12px;
+    padding: 72px 8px 72px 8px;
   }
   .footContainer, .footer__container {
-    padding: 32px 12px;
+    padding: 32px 8px;
   }
   .heading1, .home__banner__heading {
     font-size: 34px;
@@ -122,16 +122,13 @@
     font-size: 28px;
     font-weight: 500;
   }
-  .heading3, .instructions__instructions__step__heading, .about__about__content__heading, .about__privacy__content__heading, .about__changelog__content__heading, .optimize__optimizer__playerInfo__playerInfo__heading, .optimize__optimizer__characterInfo__playerInfo__heading, .optimize__optimizer__playerInfo__guildBonuses__heading, .optimize__optimizer__characterInfo__guildBonuses__heading, .optimize__optimizer__playerInfo__collectionPercentages__heading, .optimize__optimizer__characterInfo__collectionPercentages__heading, .optimize__optimizer__playerInfo__equippedGear__heading, .optimize__optimizer__playerInfo__collectionGear__heading, .optimize__optimizer__characterInfo__equippedGear__heading, .optimize__optimizer__characterInfo__collectionGear__heading {
+  .heading3, .instructions__instructions__step__heading, .about__about__content__heading, .about__privacy__content__heading, .about__changelog__content__heading, .optimize__optimizer__playerInfo__playerInfo__heading, .optimize__optimizer__characterInfo__playerInfo__heading, .optimize__optimizer__playerInfo__guildBonuses__heading, .optimize__optimizer__characterInfo__guildBonuses__heading, .optimize__optimizer__playerInfo__collectionPercentages__heading, .optimize__optimizer__characterInfo__collectionPercentages__heading, .optimize__optimizer__playerInfo__equippedGear__heading, .optimize__optimizer__playerInfo__collectionGear__heading, .optimize__optimizer__characterInfo__equippedGear__heading, .optimize__optimizer__characterInfo__collectionGear__heading, .optimize__optimizer__playerInfo__results__heading, .optimize__optimizer__characterInfo__results__heading {
     font-weight: 400;
     font-size: 18px;
   }
   .heading4, .about__about__content__subHeading, .about__privacy__content__subHeading, .about__changelog__content__subHeading {
     font-weight: 400;
     font-size: 16px;
-  }
-  .article, .instructions__instructions__step, .about__about__content, .about__privacy__content, .about__changelog__content, .optimize__optimizer__playerInfo__playerInfo, .optimize__optimizer__characterInfo__playerInfo, .optimize__optimizer__playerInfo__guildBonuses, .optimize__optimizer__characterInfo__guildBonuses, .optimize__optimizer__playerInfo__collectionPercentages__container, .optimize__optimizer__characterInfo__collectionPercentages__container, .optimize__optimizer__playerInfo__equippedGear, .optimize__optimizer__playerInfo__collectionGear, .optimize__optimizer__characterInfo__equippedGear, .optimize__optimizer__characterInfo__collectionGear {
-    padding: 12px;
   }
 }
 
@@ -369,7 +366,7 @@ a {
   justify-items: center;
   -ms-grid-columns: (minmax(152px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(152px, 1fr));
-  gap: 16px 20px;
+  gap: 20px;
 }
 
 .optimize__optimizer__playerInfo__guildBonuses__field, .optimize__optimizer__characterInfo__guildBonuses__field {
@@ -400,7 +397,7 @@ a {
   display: grid;
   -ms-grid-columns: auto auto auto;
       grid-template-columns: auto auto auto;
-  gap: 12px 8px;
+  gap: 20px;
 }
 
 .optimize__optimizer__playerInfo__collectionPercentages__input, .optimize__optimizer__characterInfo__collectionPercentages__input {
@@ -414,7 +411,7 @@ a {
 .optimize__optimizer__playerInfo__equippedGear__content, .optimize__optimizer__playerInfo__collectionGear__content, .optimize__optimizer__characterInfo__equippedGear__content, .optimize__optimizer__characterInfo__collectionGear__content {
   display: -ms-grid;
   display: grid;
-  gap: 16px 20px;
+  gap: 20px;
 }
 
 .optimize__optimizer__playerInfo__equippedGear__item, .optimize__optimizer__playerInfo__collectionGear__item, .optimize__optimizer__characterInfo__equippedGear__item, .optimize__optimizer__characterInfo__collectionGear__item {
@@ -422,7 +419,7 @@ a {
   display: grid;
   -ms-grid-columns: 3fr 1fr 1fr;
       grid-template-columns: 3fr 1fr 1fr;
-  gap: 16px 20px;
+  gap: 20px;
 }
 
 .optimize__optimizer__playerInfo__equippedGear__input, .optimize__optimizer__playerInfo__equippedGear__select, .optimize__optimizer__playerInfo__collectionGear__input, .optimize__optimizer__playerInfo__collectionGear__select, .optimize__optimizer__characterInfo__equippedGear__input, .optimize__optimizer__characterInfo__equippedGear__select, .optimize__optimizer__characterInfo__collectionGear__input, .optimize__optimizer__characterInfo__collectionGear__select {
@@ -501,6 +498,36 @@ a {
 .optimize__optimizer__playerInfo__submit__loading, .optimize__optimizer__playerInfo__submit__loaded, .optimize__optimizer__characterInfo__submit__loading, .optimize__optimizer__characterInfo__submit__loaded {
   display: none;
   padding-top: 18px;
+}
+
+.optimize__optimizer__playerInfo__results__container, .optimize__optimizer__characterInfo__results__container {
+  width: 100%;
+}
+
+.optimize__optimizer__playerInfo__results__content, .optimize__optimizer__characterInfo__results__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[3];
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.optimize__optimizer__playerInfo__results__field, .optimize__optimizer__characterInfo__results__field {
+  min-height: 64px;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 800px) {
+  .optimize__optimizer__characterInfo__equippedGear__content, .optimize__optimizer__characterInfo__collectionGear__content, .optimize__optimizer__characterInfo__collectionPercentages__content, .optimize__optimizer__characterInfo__guildBonuses__content, .optimize__optimizer__characterInfo__playerInfo__content {
+    gap: 10px;
+  }
+  .optimize__optimizer__characterInfo__equippedGear__item, .optimize__optimizer__characterInfo__collectionGear__item, .optimize__optimizer__characterInfo__collectionPercentages__item, .optimize__optimizer__characterInfo__guildBonuses__item, .optimize__optimizer__characterInfo__playerInfo__item {
+    gap: 10px;
+  }
+  .optimize__optimizer__characterInfo__results__content {
+    gap: 4px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -637,6 +664,10 @@ a {
   .footer__copy {
     padding-top: 32px;
   }
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .noice {
