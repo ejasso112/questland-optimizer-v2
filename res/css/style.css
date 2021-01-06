@@ -30,7 +30,6 @@
 }
 
 .navContainer, .header__container {
-  max-width: 1020px;
   padding: 6px 24px;
 }
 
@@ -335,8 +334,8 @@ a {
   display: -ms-grid;
   display: grid;
   justify-items: stretch;
-  -ms-grid-columns: (minmax(228px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
+  -ms-grid-columns: (minmax(242px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(242px, 1fr));
   gap: 16px 20px;
 }
 
@@ -477,6 +476,10 @@ a {
 }
 
 .optimize__optimizer__playerInfo__submit__button:focus, .optimize__optimizer__characterInfo__submit__button:focus {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+  -webkit-box-shadow: 0 7px #999;
+          box-shadow: 0 7px #999;
   outline: 0;
 }
 

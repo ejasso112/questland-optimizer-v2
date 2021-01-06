@@ -26,7 +26,7 @@
                 &__content {
                     display: grid;
                     justify-items: stretch;
-                    grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
+                    grid-template-columns: repeat(auto-fit, minmax(242px, 1fr));
                     gap: 16px 20px;
                 }
 
@@ -167,6 +167,8 @@
                     transition: .2s;
 
                     &:focus {
+                        transform: translateY(-7px);
+                        box-shadow: 0 7px #999;
                         outline: 0;
                     }
 
