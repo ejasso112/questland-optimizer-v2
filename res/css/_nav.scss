@@ -2,27 +2,31 @@
     position: absolute;
     z-index: 1;
     background: $secondary-background;
-    padding: $header-padding;
     width: 100%;
     
+    &__container {
+        @extend .navContainer;
+    }
     &__nav {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
 
         &__logo {
-            padding: 6px 12px;
+            padding: 12px 0px;
             font-size: 18px;
             font-weight: 500;
         }
 
-        &__logo {
-            font-size: 18px;
-            font-weight: 500;
+        &__links {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 42px
         }
 
         &__link {
-            padding: 6px 12px;
+            padding: 6px 0px;
             font-size: 16px;
             font-weight: 300;
 
@@ -33,6 +37,26 @@
             &:hover {
                 transition: .2s;
                 color: #23A8E4;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .header {
+        &__nav {
+            &__links {
+                gap: 28px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .header {
+        &__nav {
+            &__links {
+                gap: 24px;
             }
         }
     }

@@ -33,6 +33,8 @@ const main = async () => {
     optimizeCollectionsListener()
     // Remove loading element once done loading
     $('#loading').remove()
+    $('.optimize__container').css('filter', 'none')
+    $('.optimize__container').css('pointer-events', 'visible')
 
     // Test Data
     $('#playerName').val('TOXICB3AST')

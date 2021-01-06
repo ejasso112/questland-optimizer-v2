@@ -21,6 +21,11 @@ $footer-padding: 72px 24px;
     background: $secondary-background;
 }
 
+.navContainer {
+    max-width: 1020px;
+    padding: 6px 24px;
+}
+
 .mainContainer {
     max-width: 1020px;
     padding: 72px 24px;
@@ -90,6 +95,10 @@ $footer-padding: 72px 24px;
         margin-bottom: 12px;
     }
     
+    .navContainer {
+        padding: 6px 12px;
+    }
+
     .container {
         padding: 72px 12px 32px 12px;
     }

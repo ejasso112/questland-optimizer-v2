@@ -7,27 +7,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>questlandOptimizer - Optimize</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Questlan Collections Gear Optimizer." />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer type="module" src="res/js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="res/css/style.css" />
 </head>
 
 <body>
-    <header class="header">
-        <nav class="header__nav">
-            <a href="/index.html" class="header__nav__logo">questlandOptimizer.</a>
-            <div class="header__nav__links">
-                <a href="/instructions.html" class="header__nav__link home__header__nav__link">instructions</a>
-                <a href="/optimize.html" class="header__nav__link header__nav__link--active">optimize</a>
-                <a href="/about.html" class="header__nav__link">about</a>
+    <div id="loading" class="loading">
+        <div class="loading__container">
+            <div class="loading__ring2">
+                <div class="loading__ballHolder">
+                    <div class="loading__ball"></div>
+                </div>
             </div>
-        </nav>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header__container">
+            <nav class="header__nav">
+                <a href="/index.html" class="header__nav__logo">questlandOptimizer.</a>
+                <div class="header__nav__links">
+                    <a href="/instructions.html" class="header__nav__link">instructions</a>
+                    <a href="/optimize.html" class="header__nav__link header__nav__link--active">optimize</a>
+                    <a href="/about.html" class="header__nav__link">about</a>
+                </div>
+            </nav>
+        </div>
         <div class="noice"></div>
     </header>
 
     <main class="optimize">
         <div class="optimize__container">
-            <h1 id="loading">Loading...</h1>
+
             <section class="optimize__optimizer">
                 <h2 class="optimize__optimizer__heading">Optimize.</h2>
                 <form class="optimize__optimizer__playerInfo" id="playerInfo__form" onsubmit="return false;">

@@ -3,6 +3,8 @@
 
     &__container {
         @extend .container;
+        filter: blur(1px);
+        pointer-events: none;
         width: 100%;
     }
 
