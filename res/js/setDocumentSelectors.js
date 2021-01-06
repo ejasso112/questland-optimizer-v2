@@ -18,6 +18,7 @@ const setDocumentSelectors = async () => {
         ) {
             $('.optimize__optimizer__characterInfo__equippedGear__select').append(
                 $('<option>', {
+                    class: 'optimize__optimizer__characterInfo__equippedGear__option',
                     id: state.gearSorted[i].id,
                     value: state.gearSorted[i].name,
                     text: state.gearSorted[i].name,
@@ -26,6 +27,7 @@ const setDocumentSelectors = async () => {
 
             $('.optimize__optimizer__characterInfo__collectionGear__select').append(
                 $('<option>', {
+                    class: 'optimize__optimizer__characterInfo__collectionGear__select',
                     id: state.gearSorted[i].id,
                     value: state.gearSorted[i].name,
                     text: state.gearSorted[i].name,

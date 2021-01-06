@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-.body, .instructions, .about, .optimize {
+.body, .home, .instructions, .about, .optimize {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,17 +29,22 @@
   background: #151A20;
 }
 
+.mainContainer, .home__container {
+  max-width: 1020px;
+  padding: 72px 24px;
+}
+
 .container, .instructions__container, .about__container, .optimize__container {
   max-width: 800px;
   padding: 72px 24px;
 }
 
-.foot__container, .footer__container {
+.footContainer, .footer__container {
   max-width: 1200px;
   padding: 72px 24px;
 }
 
-.section, .instructions__instructions, .about__about, .about__privacy, .about__changelog, .optimize__optimizer {
+.section, .home__banner, .instructions__instructions, .about__about, .about__privacy, .about__changelog, .optimize__optimizer {
   padding-top: 32px;
   padding-bottom: 12px;
 }
@@ -48,6 +53,15 @@
   padding: 24px;
   margin-bottom: 24px;
   background: rgba(255, 255, 255, 0.025);
+}
+
+.heading1, .home__banner__heading {
+  padding-bottom: 22px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+  line-height: 1.4;
+  color: #23A8E4;
+  font-size: 54px;
+  font-weight: 900;
 }
 
 .heading2, .instructions__instructions__heading, .about__about__heading, .about__privacy__heading, .about__changelog__heading, .optimize__optimizer__heading {
@@ -79,14 +93,44 @@
 }
 
 @media only screen and (max-width: 800px) {
+  .article, .instructions__instructions__step, .about__about__content, .about__privacy__content, .about__changelog__content, .optimize__optimizer__playerInfo__playerInfo, .optimize__optimizer__characterInfo__playerInfo, .optimize__optimizer__playerInfo__guildBonuses, .optimize__optimizer__characterInfo__guildBonuses, .optimize__optimizer__playerInfo__collectionPercentages__container, .optimize__optimizer__characterInfo__collectionPercentages__container, .optimize__optimizer__playerInfo__equippedGear, .optimize__optimizer__playerInfo__collectionGear, .optimize__optimizer__characterInfo__equippedGear, .optimize__optimizer__characterInfo__collectionGear {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
   .container, .instructions__container, .about__container, .optimize__container {
     padding: 72px 12px 32px 12px;
   }
-  .foot__container, .footer__container {
+  .mainContainer, .home__container {
+    padding: 72px 12px 72px 12px;
+  }
+  .footContainer, .footer__container {
     padding: 32px 12px;
+  }
+  .heading1, .home__banner__heading {
+    font-size: 34px;
+    font-weight: 700;
+  }
+  .heading2, .instructions__instructions__heading, .about__about__heading, .about__privacy__heading, .about__changelog__heading, .optimize__optimizer__heading {
+    font-size: 28px;
+    font-weight: 500;
+  }
+  .heading3, .instructions__instructions__step__heading, .about__about__content__heading, .about__privacy__content__heading, .about__changelog__content__heading, .optimize__optimizer__playerInfo__playerInfo__heading, .optimize__optimizer__characterInfo__playerInfo__heading, .optimize__optimizer__playerInfo__guildBonuses__heading, .optimize__optimizer__characterInfo__guildBonuses__heading, .optimize__optimizer__playerInfo__collectionPercentages__heading, .optimize__optimizer__characterInfo__collectionPercentages__heading, .optimize__optimizer__playerInfo__equippedGear__heading, .optimize__optimizer__playerInfo__collectionGear__heading, .optimize__optimizer__characterInfo__equippedGear__heading, .optimize__optimizer__characterInfo__collectionGear__heading {
+    font-weight: 400;
+    font-size: 18px;
+  }
+  .heading4, .about__about__content__subHeading, .about__privacy__content__subHeading, .about__changelog__content__subHeading {
+    font-weight: 400;
+    font-size: 16px;
   }
   .article, .instructions__instructions__step, .about__about__content, .about__privacy__content, .about__changelog__content, .optimize__optimizer__playerInfo__playerInfo, .optimize__optimizer__characterInfo__playerInfo, .optimize__optimizer__playerInfo__guildBonuses, .optimize__optimizer__characterInfo__guildBonuses, .optimize__optimizer__playerInfo__collectionPercentages__container, .optimize__optimizer__characterInfo__collectionPercentages__container, .optimize__optimizer__playerInfo__equippedGear, .optimize__optimizer__playerInfo__collectionGear, .optimize__optimizer__characterInfo__equippedGear, .optimize__optimizer__characterInfo__collectionGear {
     padding: 12px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .heading1, .home__banner__heading {
+    font-size: 28px;
+    font-weight: 700;
   }
 }
 
@@ -156,49 +200,23 @@ a {
   color: #23A8E4;
 }
 
-.home__main {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
-  background: -webkit-gradient(linear, left top, right bottom, from(#222830), to(#161C23));
-  background: linear-gradient(to bottom right, #222830, #161C23);
+.home__container {
+  height: 100%;
 }
 
-.home__main__content {
-  max-width: 1020px;
-  padding-bottom: 64px;
-}
-
-.home__main__content__heading {
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
-  color: #23A8E4;
-  font-size: 64px;
-  font-weight: 900;
-  line-height: 1.4;
-  padding-bottom: 12px;
-}
-
-.home__main__content__subHeading {
+.home__banner__content__heading {
   color: #C7C7C7;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 300;
   line-height: 2.2;
   letter-spacing: 1px;
 }
 
-.home__main__content__buttons {
+.home__banner__content__buttons {
   padding-top: 72px;
 }
 
-.home__main__content__callToAction {
+.home__banner__content__callToAction {
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
   border-radius: 16px;
   padding: 12px 24px;
@@ -210,7 +228,7 @@ a {
   color: #FFFFFF;
 }
 
-.home__main__content__subButton {
+.home__banner__content__subButton {
   border-radius: 16px;
   padding: 12px 24px;
   font-weight: 400;
@@ -219,12 +237,20 @@ a {
   color: #C7C7C7;
 }
 
-@media only screen and (max-width: 752px) {
-  .home__main__content__heading {
-    font-size: 32px;
-    font-weight: 900;
-    line-height: 1.4;
-    padding-bottom: 12px;
+@media only screen and (max-width: 800px) {
+  .home__banner__content__heading {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: .6px;
+  }
+  .home__banner__content__callToAction {
+    font-size: 12px;
+    padding: 12px 20px;
+  }
+  .home__banner__content__subButton {
+    font-size: 12px;
+    padding: 12px 20px;
   }
 }
 
@@ -382,6 +408,10 @@ a {
   font-size: 14px;
 }
 
+.optimize__optimizer__playerInfo__equippedGear__option, .optimize__optimizer__playerInfo__collectionGear__option, .optimize__optimizer__characterInfo__equippedGear__option, .optimize__optimizer__characterInfo__collectionGear__option {
+  color: rgba(22, 28, 35, 0.5);
+}
+
 .optimize__optimizer__playerInfo__equippedGear__input, .optimize__optimizer__playerInfo__collectionGear__input, .optimize__optimizer__characterInfo__equippedGear__input, .optimize__optimizer__characterInfo__collectionGear__input {
   width: 80%;
 }
@@ -450,12 +480,9 @@ a {
 
 @media only screen and (max-width: 600px) {
   .optimize__optimizer__characterInfo__collectionPercentages {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 20px;
+    gap: 0px;
   }
 }
 

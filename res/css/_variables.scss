@@ -21,12 +21,17 @@ $footer-padding: 72px 24px;
     background: $secondary-background;
 }
 
+.mainContainer {
+    max-width: 1020px;
+    padding: 72px 24px;
+}
+
 .container {
     max-width: 800px;
     padding: 72px 24px;
 }
 
-.foot__container {
+.footContainer {
     max-width: 1200px;
     padding: 72px 24px;
 }
@@ -40,6 +45,15 @@ $footer-padding: 72px 24px;
     padding: 24px;
     margin-bottom: 24px;
     background: rgba($color: #FFFFFF, $alpha: .025);
+}
+
+.heading1 {
+    padding-bottom: 22px;
+    text-shadow: 0 3px 6px rgba($color: #000000, $alpha: .6);
+    line-height: 1.4;
+    color: #23A8E4;
+    font-size: 54px;
+    font-weight: 900;
 }
 
 .heading2 {
@@ -71,15 +85,51 @@ $footer-padding: 72px 24px;
 }
 
 @media only screen and (max-width: 800px) {
+    .article {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+    
     .container {
         padding: 72px 12px 32px 12px;
     }
 
-    .foot__container {
+    .mainContainer {
+        padding: 72px 12px 72px 12px;
+    }
+
+    .footContainer {
         padding: 32px 12px;
     }
     
+    .heading1 {
+        font-size: 34px;
+        font-weight: 700;
+    }
+
+    .heading2 {
+        font-size: 28px;
+        font-weight: 500;
+    }
+    
+    .heading3 {
+        font-weight: 400;
+        font-size: 18px;
+    }
+    
+    .heading4 {
+        font-weight: 400;
+        font-size: 16px;
+    }
+
     .article {
         padding: 12px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .heading1 {
+        font-size: 28px;
+        font-weight: 700;
     }
 }
