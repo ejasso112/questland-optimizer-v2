@@ -51,6 +51,86 @@
 
     <main class="optimize">
         <div class="optimize__container">
+            <section class="optimize__options">
+                <h3 class="optimize__options__heading">Options.</h3>
+                <form class="optimize__options__settings" id="settings__form" onsubmit="return false;">
+                    <section class="optimize__options__settings__priority">
+                        <h4 class="optimize__options__settings__priority__heading">Priority:</h4>
+                        <div class="optimize__options__settings__priority__content">
+                            <p class="optimize__options__settings__priority__field">
+                                <label class="optimize__options__settings__priority__label" for="maxPowerPriority">Max Power</label>
+                                <input class="optimize__options__settings__priority__input" id="maxPowerPriority" name="priority" type="radio" value="Max Power" checked>
+                            </p>
+                            <p class="optimize__options__settings__priority__field">
+                                <label class="optimize__options__settings__priority__label" for="redEventPriority">Red Event</label>
+                                <input class="optimize__options__settings__priority__input" id="redEventPriority" name="priority" type="radio" value="Red Event">
+                            </p>
+                            <p class="optimize__options__settings__priority__field">
+                                <label class="optimize__options__settings__priority__label" for="blueEventPriority">Blue Event</label>
+                                <input class="optimize__options__settings__priority__input" id="blueEventPriority" name="priority" type="radio" value="Blue Event">
+                            </p>
+                            <p class="optimize__options__settings__priority__field">
+                                <label class="optimize__options__settings__priority__label" for="customPriority">Custom</label>
+                                <input class="optimize__options__settings__priority__input" id="customPriority" name="priority" type="radio" value="Custom">
+                            </p>
+                        </div>
+                        <div class="optimize__options__settings__priority__content" id="customPriorityContent">
+                            <p class="optimize__options__settings__priority__field">
+                                <label class="optimize__options__settings__priority__label" for="attackPriority">Attack</label>
+                                <output class="optimize__options__settings__priority___output" id="attackPriority" name="attackPriority">1</output>
+                                <input class="optimize__options__settings__priority__input" id="attackPriorityUp" name="attackPriority" type="button" value="Up" aria-label="Move Attack Priority Up">
+                                <input class="optimize__options__settings__priority__input" id="attackPriorityDown" name="attackPriority" type="button" value="Down" aria-label="Move Attack Priority Down">
+                            </p>
+                            
+                            <p class="optimize__options__settings__priority__field">
+                                <label class="optimize__options__settings__priority__label" for="defensePriority">Defense</label>
+                                <output class="optimize__options__settings__priority___output" id="defensePriority" name="defensePriority">1</output>
+                                <input class="optimize__options__settings__priority__input" id="defensePriorityUp" name="defensePriority" type="button" value="Up" aria-label="Move Defense Priority Up">
+                                <input class="optimize__options__settings__priority__input" id="defensePriorityDown" name="defensePriority" type="button" value="Down" aria-label="Move Defense Priority Down">
+                            </p>
+                            
+                            <p class="optimize__options__settings__priority__field">
+                                <label class="optimize__options__settings__priority__label" for="healthPriority">Health</label>
+                                <output class="optimize__options__settings__priority___output" id="healthPriority" name="healthPriority">1</output>
+                                <input class="optimize__options__settings__priority__input" id="healthPriorityUp" name="healthPriority" type="button" value="Up" aria-label="Move Health Priority Up">
+                                <input class="optimize__options__settings__priority__input" id="healthPriorityDown" name="healthPriority" type="button" value="Down" aria-label="Move Health Priority Down">
+                            </p>
+                            
+                            <p class="optimize__options__settings__priority__field">
+                                <label class="optimize__options__settings__priority__label" for="magicPriority">Magic</label>
+                                <output class="optimize__options__settings__priority___output" id="magicPriority" name="magicPriority">1</output>
+                                <input class="optimize__options__settings__priority__input" id="magicPriorityUp" name="magicPriority" type="button" value="Up" aria-label="Move Magic Priority Up">
+                                <input class="optimize__options__settings__priority__input" id="magicPriorityDown" name="magicPriority" type="button" value="Down" aria-label="Move Magic Priority Down">
+                            </p>
+                        </div>
+                    </section>
+                    <section class="optimize__options__settings__build">
+                        <h4 class="optimize__options__settings__build__heading">Build:</h4>
+                        <div>
+                            <p class="optimize__options__settings__build__field">
+                                <label class="optimize__options__settings__build__label" for="sameBuild">Don't Change</label>
+                                <input class="optimize__options__settings__build__input" id="sameBuild" name="uild" type="radio" value="Don't Change" checked>
+                            </p>
+                            <p class="optimize__options__settings__build__field">
+                                <label class="optimize__options__settings__build__label" for="attackHealthBuild">Attack / Health</label>
+                                <input class="optimize__options__settings__build__input" id="attackHealthBuild" name="build" type="radio" value="Attack / Health">
+                            </p>
+                            <p class="optimize__options__settings__build__field">
+                                <label class="optimize__options__settings__build__label" for="magicDefenseBuild">Magic / Defense</label>
+                                <input class="optimize__options__settings__build__input" id="magicDefenseBuild" name="build" type="radio" value="Magic / Defense">
+                            </p>
+                        </div>
+                    </section>
+                    <section class="optimize__options__settings__submit">
+                        <p class="optimize__options__settings__submit__field">
+                            <button class="optimize__options__settings__submit__button" type="submit">Apply Options</button>
+                        </p>
+                        <p class="optimize__options__settings__submit__loading" id="playerInfoLoading">
+                            Applied...
+                        </p>
+                    </section>
+                </form>
+            </section>
 
             <section class="optimize__optimizer">
                 <h2 class="optimize__optimizer__heading">Optimize.</h2>
