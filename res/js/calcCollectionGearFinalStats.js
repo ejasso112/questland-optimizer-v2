@@ -1,8 +1,8 @@
 import state from './state.js'
 
-const calcCollectionGearFinalStats = (collectionGearObj) => {
+const calcCollectionGearFinalStats = () => {
     for (let i = 1; i <= 20; i++) {
-        const gear = collectionGearObj[`slot${i}`]
+        const gear = state.collectionGearChanged[`slot${i}`]
     
         state.collectionGearFinalStats[`slot${i}`] = {
             id: gear.id,
