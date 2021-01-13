@@ -101,8 +101,6 @@ const optiomizeCollectionBuild = (type) => {
         state.equppedGearChanged = {...state.equppedGear}
         state.collectionGearChanged = {...state.collectionGear}
     }
-
-    console.log(optimizedEquippedGear)
 }
 
 const optiomizeCollectionMaxPower = () => {
@@ -123,40 +121,35 @@ const optiomizeCollectionMaxPower = () => {
 }
 
 const swapGear = (currSlot, otherSlot) => {
+    const type = $('input[name="priority"]:checked').val()
+    const priority = type === 'none' ? {attack: 1, defense: 1, health: 1, magic: 1} :
+    type === 'red' ? {attack: 1, defense: 3, health: 2, magic: 4} :
+    type === 'blue' ? {attack: 4, defense: 3, health: 2, magic: 1} :
+    {attack: Number($('#attackPriority').val()), defense: Number($('#defensePriority').val()), health: Number($('#healthPriority').val()), magic: Number($('#magicPriority').val())}
+    
     const currSlotPrecentage = state.collectionPercentages[currSlot]
     const currSlotStats = state.collectionGearFinalStats[currSlot]
+    const currSlotPriority = priority[`${currSlotPrecentage.type}`]
     const otherSlotPrecentage = state.collectionPercentages[otherSlot]
     const otherSlotStats = state.collectionGearFinalStats[otherSlot]
+    const otherSlotPriority = priority[`${otherSlotPrecentage.type}`]
 
-    const currGearDefaultActiveStat = (currSlotPrecentage.type === 'attack' ? currSlotStats.attack :
-        currSlotPrecentage.type === 'defense' ? currSlotStats.defense :
-        currSlotPrecentage.type === 'magic' ? currSlotStats.magic :
-        currSlotPrecentage.type === 'health' && currSlotStats.health
-    ) * currSlotPrecentage.value / 100
-
-    const currGearOtherActiveStat = (otherSlotPrecentage.type === 'attack' ? currSlotStats.attack :
-        otherSlotPrecentage.type === 'defense' ? currSlotStats.defense :
-        otherSlotPrecentage.type === 'magic' ? currSlotStats.magic :
-        otherSlotPrecentage.type === 'health' && currSlotStats.health
-    ) * otherSlotPrecentage.value / 100
-
-    const otherGearDefaultActiveStat = (otherSlotPrecentage.type === 'attack' ? otherSlotStats.attack :
-        otherSlotPrecentage.type === 'defense' ? otherSlotStats.defense :
-        otherSlotPrecentage.type === 'magic' ? otherSlotStats.magic :
-        otherSlotPrecentage.type === 'health' && otherSlotStats.health
-    ) * otherSlotPrecentage.value / 100
-
-    const otherGearCurrActiveStat = (currSlotPrecentage.type === 'attack' ? otherSlotStats.attack :
-        currSlotPrecentage.type === 'defense' ? otherSlotStats.defense :
-        currSlotPrecentage.type === 'magic' ? otherSlotStats.magic :
-        currSlotPrecentage.type === 'health' && otherSlotStats.health
-    ) * currSlotPrecentage.value / 100
+    const currGearDefaultActiveStat = currSlotStats[`${currSlotPrecentage.type}`] * currSlotPrecentage.value / 100
+    const currGearOtherActiveStat = currSlotStats[`${otherSlotPrecentage.type}`] * otherSlotPrecentage.value / 100
+    const otherGearDefaultActiveStat = otherSlotStats[`${otherSlotPrecentage.type}`] * otherSlotPrecentage.value / 100
+    const otherGearCurrActiveStat = otherSlotStats[`${currSlotPrecentage.type}`] * currSlotPrecentage.value / 100
 
     const defaultActiveStatSum = currGearDefaultActiveStat + otherGearDefaultActiveStat
     const otherActiveStatSum = currGearOtherActiveStat + otherGearCurrActiveStat
+    
+    if (currSlotPriority < otherSlotPriority && currGearDefaultActiveStat < otherGearCurrActiveStat) {
+        const temp = currSlotStats
+        state.collectionGearFinalStats[currSlot] = otherSlotStats
+        state.collectionGearFinalStats[otherSlot] = temp
 
-    if (defaultActiveStatSum < otherActiveStatSum) {
-        console.log('swap')
+        return true
+    }
+    else if (currSlotPriority === otherSlotPriority && defaultActiveStatSum < otherActiveStatSum) {
         const temp = currSlotStats
         state.collectionGearFinalStats[currSlot] = otherSlotStats
         state.collectionGearFinalStats[otherSlot] = temp
@@ -166,12 +159,31 @@ const swapGear = (currSlot, otherSlot) => {
     else {
         return false
     }
+
 }
 
 const displayResults = () => {
     for(let i = 1; i <=10; i++) {
         $(`#collection1Result${i}`).val(state.collectionGearFinalStats[`slot${i}`].value)
         $(`#collection2Result${i}`).val(state.collectionGearFinalStats[`slot${i + 10}`].value)
+    }
+    for (let i = 1; i <= 7; i++) {
+        const gear = state.equppedGearChanged[`slot${i}`]
+
+        const helm = gear.itemSlot === 'HELM' ? gear.value : $(`#equippedHelm`).val()
+        $(`#equippedHelm`).val(helm)
+        const chest =  gear.itemSlot === 'CHEST' ? gear.value : $(`#equippedChest`).val()
+        $(`#equippedChest`).val(chest)
+        const gloves =  gear.itemSlot === 'GLOVES' ? gear.value : $(`#equippedGloves`).val()
+        $(`#equippedGloves`).val(gloves)
+        const boots =  gear.itemSlot === 'BOOTS' ? gear.value : $(`#equippedBoots`).val()
+        $(`#equippedBoots`).val(boots)
+        const talisman =  gear.itemSlot === 'TALISMAN' ? gear.value : $(`#equippedTalisman`).val()
+        $(`#equippedTalisman`).val(talisman)
+        const necklace =  gear.itemSlot === 'NECKLACE' ? gear.value : $(`#equippedNacklace`).val()
+        $(`#equippedNacklace`).val(necklace)
+        const ring =  gear.itemSlot === 'RING' ? gear.value : $(`#equippedRing`).val()
+        $(`#equippedRing`).val(ring)
     }
 }
 

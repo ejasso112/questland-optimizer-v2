@@ -59,19 +59,19 @@
                         <div class="optimize__options__settings__priority__content">
                             <p class="optimize__options__settings__priority__field">
                                 <label class="optimize__options__settings__priority__label" for="maxPowerPriority">Max Power</label>
-                                <input class="optimize__options__settings__priority__input" id="maxPowerPriority" name="priority" type="radio" value="Max Power" checked>
+                                <input class="optimize__options__settings__priority__input" id="maxPowerPriority" name="priority" type="radio" value="none" checked>
                             </p>
                             <p class="optimize__options__settings__priority__field">
                                 <label class="optimize__options__settings__priority__label" for="redEventPriority">Red Event</label>
-                                <input class="optimize__options__settings__priority__input" id="redEventPriority" name="priority" type="radio" value="Red Event">
+                                <input class="optimize__options__settings__priority__input" id="redEventPriority" name="priority" type="radio" value="red">
                             </p>
                             <p class="optimize__options__settings__priority__field">
                                 <label class="optimize__options__settings__priority__label" for="blueEventPriority">Blue Event</label>
-                                <input class="optimize__options__settings__priority__input" id="blueEventPriority" name="priority" type="radio" value="Blue Event">
+                                <input class="optimize__options__settings__priority__input" id="blueEventPriority" name="priority" type="radio" value="blue">
                             </p>
                             <p class="optimize__options__settings__priority__field">
                                 <label class="optimize__options__settings__priority__label" for="customPriority">Custom</label>
-                                <input class="optimize__options__settings__priority__input" id="customPriority" name="priority" type="radio" value="Custom">
+                                <input class="optimize__options__settings__priority__input" id="customPriority" name="priority" type="radio" value="custom">
                             </p>
                         </div>
                         <div class="optimize__options__settings__priority__content" id="customPriorityContent" style="display: none;">
@@ -578,6 +578,45 @@
                     </section>
 
                     <section class="optimize__optimizer__characterInfo__results">
+                        <article class="optimize__optimizer__characterInfo__results__container" id='buildResults' style="display: none;">
+                            <h3 class="optimize__optimizer__characterInfo__results__heading">Equipped Optimized:</h3>
+                            <div class="optimize__optimizer__characterInfo__results__content">
+                                <p class="optimize__optimizer__characterInfo__results__field">
+                                    <output class="optimize__optimizer__characterInfo__results__output" id="equippedHelm" name="equippedHelm" aria-label="Equipped Helmet">Must Click Optimize</output>
+                                </p>
+                                <p class="optimize__optimizer__characterInfo__results__field hidden">
+                                </p>
+                                <p class="optimize__optimizer__characterInfo__results__field">
+                                    <output class="optimize__optimizer__characterInfo__results__output" id="equippedNecklace" name="equippedNecklace" aria-label="Equipped Necklace">Must Click Optimize</output>
+                                </p>
+
+                                <p class="optimize__optimizer__characterInfo__results__field">
+                                    <output class="optimize__optimizer__characterInfo__results__output" id="equippedChest" name="equippedChest" aria-label="Equipped Armor">Must Click Optimize</output>
+                                </p>
+                                <p class="optimize__optimizer__characterInfo__results__field hidden">
+                                </p>
+                                <p class="optimize__optimizer__characterInfo__results__field">
+                                    <output class="optimize__optimizer__characterInfo__results__output" id="equippedRing" name="equippedRing" aria-label="Equipped Ring">Must Click Optimize</output>
+                                </p>
+
+                                <p class="optimize__optimizer__characterInfo__results__field">
+                                    <output class="optimize__optimizer__characterInfo__results__output" id="equippedGloves" name="equippedGloves" aria-label="Equipped Gloves">Must Click Optimize</output>
+                                </p>
+                                <p class="optimize__optimizer__characterInfo__results__field hidden">
+                                </p>
+                                <p class="optimize__optimizer__characterInfo__results__field">
+                                    <output class="optimize__optimizer__characterInfo__results__output" id="equippedTalisman" name="equippedTalisman" aria-label="Equipped Talisman">Must Click Optimize</output>
+                                </p>
+
+                                <p class="optimize__optimizer__characterInfo__results__field">
+                                    <output class="optimize__optimizer__characterInfo__results__output" id="equippedBoots" name="equippedBoots" aria-label="Equipped Boots">Must Click Optimize</output>
+                                </p>
+                                <p class="optimize__optimizer__characterInfo__results__field hidden">
+                                </p>
+                                <p class="optimize__optimizer__characterInfo__results__field hidden">
+                                </p>
+                            </div>
+                        </article>
                         <article class="optimize__optimizer__characterInfo__results__container">
                             <h3 class="optimize__optimizer__characterInfo__results__heading">Collection 1 Optimized:</h3>
                             <div class="optimize__optimizer__characterInfo__results__content">

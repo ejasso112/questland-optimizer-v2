@@ -1,7 +1,9 @@
 const options = () => {
     const priority = $('input[name="priority"]:checked').val()
-    console.log(priority)
-    priority === 'Custom' ? $('#customPriorityContent').css('display', 'block') : $('#customPriorityContent').css('display', 'none')
+    const build = $('input[name="build"]:checked').val()
+    
+    priority === 'custom' ? $('#customPriorityContent').css('display', 'block') : $('#customPriorityContent').css('display', 'none')
+    build === 'none' ? $('#buildResults').css('display', 'none') : $('#buildResults').css('display', 'block')
 }
 
 const customPriority = (e, dir) => {
@@ -92,6 +94,7 @@ const customPriority = (e, dir) => {
 
 export const optionsListeners = () => {
     $('input[type=radio][name=priority]').change(options)
+    $('input[type=radio][name=build]').change(options)
     $('#attackPriorityUp').click((e) => customPriority(e,'up'))
     $('#attackPriorityDown').click((e) => customPriority(e,'down'))
     $('#defensePriorityUp').click((e) => customPriority(e,'up'))
