@@ -3,6 +3,8 @@
 
     &__container {
         @extend .container;
+        max-width: 1200px;
+
         filter: blur(1px);
         pointer-events: none;
         width: 100%;
@@ -10,9 +12,75 @@
 
     &__optimizer {
         @extend .section;
+        display: grid;
+        grid-template-columns: 220px minmax(300px, 800px);
+        grid-template-rows: auto auto auto;
+        gap: 20px;
 
         &__heading {
             @extend .heading2;
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+
+        }
+
+        &__settings {
+            @extend .article;
+            height:fit-content;
+            position: sticky;
+            z-index: 1;
+            top: 20px;
+            grid-column: 1 / 2;
+            grid-row: 2 / 4;
+
+            &__heading {
+                @extend .heading3;
+            }
+            
+            &__priority, &__build {
+                padding-bottom: 16px;
+                &__heading {
+                    @extend .heading4;
+                }
+
+                &__field {
+                    display: flex;
+                    padding-left: 8px;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-bottom: 4px;
+                    flex-direction: row;
+                }
+
+                &__custom {
+                    border-top: 2px solid rgba($color: #FFFFFF, $alpha: .1);
+                    margin-top: 8px;
+                    padding-top: 12px;
+                }
+
+                &__up, &__down {
+                    font-weight: 900;
+                    font-size: 20px;
+                    padding: 0px 2px;
+                }
+
+                &__up {
+                    color: rgb(44, 165, 44);
+                }
+
+                &__down {
+                    color: rgb(208, 76, 76);
+                }
+            }
+        }
+        &__playerInfo {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+
+        &__characterInfo {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
         }
 
         &__playerInfo, &__characterInfo {
@@ -216,11 +284,19 @@
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
     .optimize {
         &__optimizer {
+            gap: 10px;
+
+            &__settings {
+                top: 10px;
+            }
+            
             &__characterInfo {
                 &__equippedGear, &__collectionGear, &__collectionPercentages, &__guildBonuses, &__playerInfo {
+                    gap: 10px;
+
                     &__content {
                         gap: 10px;
                     }
@@ -235,6 +311,65 @@
                         gap: 4px;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .optimize {
+        &__optimizer {
+            grid-template-columns: 1fr;
+
+            &__heading {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+            &__playerInfo {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+            }
+            &__settings {
+                position: relative;
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+
+                display: grid;
+                gap: 0 68px;
+                grid-template-columns: 1fr 1fr;
+                &__heading {
+                    grid-column: 1 / 2;
+                    grid-row: 1 / 2;
+                }
+
+                &__priority {
+                    grid-column: 1 / 2;
+                    grid-row: 2 / 3;
+                }
+
+                &__priority__custom {
+                    grid-column: 1 / 2;
+                    grid-row: 3 / 4;
+                }
+
+                &__build {
+                    grid-column: 2 / 3;
+                    grid-row: 2 / 3;
+                }
+            }
+            &__characterInfo {
+                grid-column: 1 / 2;
+                grid-row: 4 / 5;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .optimize {
+        &__optimizer {
+            &__settings {
+                display: block;
             }
         }
     }

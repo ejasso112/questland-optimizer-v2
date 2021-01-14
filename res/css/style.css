@@ -53,7 +53,7 @@
   padding-bottom: 12px;
 }
 
-.article, .instructions__instructions__step, .about__about__content, .about__privacy__content, .about__changelog__content, .optimize__optimizer__playerInfo__playerInfo, .optimize__optimizer__characterInfo__playerInfo, .optimize__optimizer__playerInfo__guildBonuses, .optimize__optimizer__characterInfo__guildBonuses, .optimize__optimizer__playerInfo__collectionPercentages__container, .optimize__optimizer__characterInfo__collectionPercentages__container, .optimize__optimizer__playerInfo__equippedGear, .optimize__optimizer__playerInfo__collectionGear, .optimize__optimizer__characterInfo__equippedGear, .optimize__optimizer__characterInfo__collectionGear, .optimize__optimizer__playerInfo__results__container, .optimize__optimizer__characterInfo__results__container {
+.article, .instructions__instructions__step, .about__about__content, .about__privacy__content, .about__changelog__content, .optimize__optimizer__settings, .optimize__optimizer__playerInfo__playerInfo, .optimize__optimizer__characterInfo__playerInfo, .optimize__optimizer__playerInfo__guildBonuses, .optimize__optimizer__characterInfo__guildBonuses, .optimize__optimizer__playerInfo__collectionPercentages__container, .optimize__optimizer__characterInfo__collectionPercentages__container, .optimize__optimizer__playerInfo__equippedGear, .optimize__optimizer__playerInfo__collectionGear, .optimize__optimizer__characterInfo__equippedGear, .optimize__optimizer__characterInfo__collectionGear, .optimize__optimizer__playerInfo__results__container, .optimize__optimizer__characterInfo__results__container {
   padding: 24px;
   margin-bottom: 24px;
   background: rgba(255, 255, 255, 0.025);
@@ -76,7 +76,7 @@
   font-weight: 600;
 }
 
-.heading3, .instructions__instructions__step__heading, .about__about__content__heading, .about__privacy__content__heading, .about__changelog__content__heading, .optimize__optimizer__playerInfo__playerInfo__heading, .optimize__optimizer__characterInfo__playerInfo__heading, .optimize__optimizer__playerInfo__guildBonuses__heading, .optimize__optimizer__characterInfo__guildBonuses__heading, .optimize__optimizer__playerInfo__collectionPercentages__heading, .optimize__optimizer__characterInfo__collectionPercentages__heading, .optimize__optimizer__playerInfo__equippedGear__heading, .optimize__optimizer__playerInfo__collectionGear__heading, .optimize__optimizer__characterInfo__equippedGear__heading, .optimize__optimizer__characterInfo__collectionGear__heading, .optimize__optimizer__playerInfo__results__heading, .optimize__optimizer__characterInfo__results__heading {
+.heading3, .instructions__instructions__step__heading, .about__about__content__heading, .about__privacy__content__heading, .about__changelog__content__heading, .optimize__optimizer__settings__heading, .optimize__optimizer__playerInfo__playerInfo__heading, .optimize__optimizer__characterInfo__playerInfo__heading, .optimize__optimizer__playerInfo__guildBonuses__heading, .optimize__optimizer__characterInfo__guildBonuses__heading, .optimize__optimizer__playerInfo__collectionPercentages__heading, .optimize__optimizer__characterInfo__collectionPercentages__heading, .optimize__optimizer__playerInfo__equippedGear__heading, .optimize__optimizer__playerInfo__collectionGear__heading, .optimize__optimizer__characterInfo__equippedGear__heading, .optimize__optimizer__characterInfo__collectionGear__heading, .optimize__optimizer__playerInfo__results__heading, .optimize__optimizer__characterInfo__results__heading {
   padding-bottom: 16px;
   color: #FFFFFF;
   font-weight: 500;
@@ -84,10 +84,10 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-.heading4, .about__about__content__subHeading, .about__privacy__content__subHeading, .about__changelog__content__subHeading {
-  padding-bottom: 16px;
+.heading4, .about__about__content__subHeading, .about__privacy__content__subHeading, .about__changelog__content__subHeading, .optimize__optimizer__settings__priority__heading, .optimize__optimizer__settings__build__heading {
+  padding-bottom: 8px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .paragraph, .instructions__instructions__step__instruction, .instructions__complete__content, .about__about__content__paragraph, .about__privacy__content__paragraph, .about__changelog__content__paragraph {
@@ -96,8 +96,8 @@
   line-height: 2;
 }
 
-@media only screen and (max-width: 800px) {
-  .article, .instructions__instructions__step, .about__about__content, .about__privacy__content, .about__changelog__content, .optimize__optimizer__playerInfo__playerInfo, .optimize__optimizer__characterInfo__playerInfo, .optimize__optimizer__playerInfo__guildBonuses, .optimize__optimizer__characterInfo__guildBonuses, .optimize__optimizer__playerInfo__collectionPercentages__container, .optimize__optimizer__characterInfo__collectionPercentages__container, .optimize__optimizer__playerInfo__equippedGear, .optimize__optimizer__playerInfo__collectionGear, .optimize__optimizer__characterInfo__equippedGear, .optimize__optimizer__characterInfo__collectionGear, .optimize__optimizer__playerInfo__results__container, .optimize__optimizer__characterInfo__results__container {
+@media only screen and (max-width: 1200px) {
+  .article, .instructions__instructions__step, .about__about__content, .about__privacy__content, .about__changelog__content, .optimize__optimizer__settings, .optimize__optimizer__playerInfo__playerInfo, .optimize__optimizer__characterInfo__playerInfo, .optimize__optimizer__playerInfo__guildBonuses, .optimize__optimizer__characterInfo__guildBonuses, .optimize__optimizer__playerInfo__collectionPercentages__container, .optimize__optimizer__characterInfo__collectionPercentages__container, .optimize__optimizer__playerInfo__equippedGear, .optimize__optimizer__playerInfo__collectionGear, .optimize__optimizer__characterInfo__equippedGear, .optimize__optimizer__characterInfo__collectionGear, .optimize__optimizer__playerInfo__results__container, .optimize__optimizer__characterInfo__results__container {
     padding: 8px;
     margin-bottom: 12px;
   }
@@ -121,13 +121,13 @@
     font-size: 28px;
     font-weight: 500;
   }
-  .heading3, .instructions__instructions__step__heading, .about__about__content__heading, .about__privacy__content__heading, .about__changelog__content__heading, .optimize__optimizer__playerInfo__playerInfo__heading, .optimize__optimizer__characterInfo__playerInfo__heading, .optimize__optimizer__playerInfo__guildBonuses__heading, .optimize__optimizer__characterInfo__guildBonuses__heading, .optimize__optimizer__playerInfo__collectionPercentages__heading, .optimize__optimizer__characterInfo__collectionPercentages__heading, .optimize__optimizer__playerInfo__equippedGear__heading, .optimize__optimizer__playerInfo__collectionGear__heading, .optimize__optimizer__characterInfo__equippedGear__heading, .optimize__optimizer__characterInfo__collectionGear__heading, .optimize__optimizer__playerInfo__results__heading, .optimize__optimizer__characterInfo__results__heading {
+  .heading3, .instructions__instructions__step__heading, .about__about__content__heading, .about__privacy__content__heading, .about__changelog__content__heading, .optimize__optimizer__settings__heading, .optimize__optimizer__playerInfo__playerInfo__heading, .optimize__optimizer__characterInfo__playerInfo__heading, .optimize__optimizer__playerInfo__guildBonuses__heading, .optimize__optimizer__characterInfo__guildBonuses__heading, .optimize__optimizer__playerInfo__collectionPercentages__heading, .optimize__optimizer__characterInfo__collectionPercentages__heading, .optimize__optimizer__playerInfo__equippedGear__heading, .optimize__optimizer__playerInfo__collectionGear__heading, .optimize__optimizer__characterInfo__equippedGear__heading, .optimize__optimizer__characterInfo__collectionGear__heading, .optimize__optimizer__playerInfo__results__heading, .optimize__optimizer__characterInfo__results__heading {
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .heading4, .about__about__content__subHeading, .about__privacy__content__subHeading, .about__changelog__content__subHeading, .optimize__optimizer__settings__priority__heading, .optimize__optimizer__settings__build__heading {
     font-weight: 400;
     font-size: 18px;
-  }
-  .heading4, .about__about__content__subHeading, .about__privacy__content__subHeading, .about__changelog__content__subHeading {
-    font-weight: 400;
-    font-size: 16px;
   }
 }
 
@@ -324,10 +324,106 @@ a {
 }
 
 .optimize__container {
+  max-width: 1200px;
   -webkit-filter: blur(1px);
           filter: blur(1px);
   pointer-events: none;
   width: 100%;
+}
+
+.optimize__optimizer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 220px minmax(300px, 800px);
+      grid-template-columns: 220px minmax(300px, 800px);
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  gap: 20px;
+}
+
+.optimize__optimizer__heading {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.optimize__optimizer__settings {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1;
+  top: 20px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / 4;
+}
+
+.optimize__optimizer__settings__priority, .optimize__optimizer__settings__build {
+  padding-bottom: 16px;
+}
+
+.optimize__optimizer__settings__priority__field, .optimize__optimizer__settings__build__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 4px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.optimize__optimizer__settings__priority__custom, .optimize__optimizer__settings__build__custom {
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  margin-top: 8px;
+  padding-top: 12px;
+}
+
+.optimize__optimizer__settings__priority__up, .optimize__optimizer__settings__priority__down, .optimize__optimizer__settings__build__up, .optimize__optimizer__settings__build__down {
+  font-weight: 900;
+  font-size: 20px;
+  padding: 0px 2px;
+}
+
+.optimize__optimizer__settings__priority__up, .optimize__optimizer__settings__build__up {
+  color: #2ca52c;
+}
+
+.optimize__optimizer__settings__priority__down, .optimize__optimizer__settings__build__down {
+  color: #d04c4c;
+}
+
+.optimize__optimizer__playerInfo {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+.optimize__optimizer__characterInfo {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
 }
 
 .optimize__optimizer__playerInfo__playerInfo__content, .optimize__optimizer__characterInfo__playerInfo__content {
@@ -521,7 +617,16 @@ a {
   background: rgba(0, 0, 0, 0.4);
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
+  .optimize__optimizer {
+    gap: 10px;
+  }
+  .optimize__optimizer__settings {
+    top: 10px;
+  }
+  .optimize__optimizer__characterInfo__equippedGear, .optimize__optimizer__characterInfo__collectionGear, .optimize__optimizer__characterInfo__collectionPercentages, .optimize__optimizer__characterInfo__guildBonuses, .optimize__optimizer__characterInfo__playerInfo {
+    gap: 10px;
+  }
   .optimize__optimizer__characterInfo__equippedGear__content, .optimize__optimizer__characterInfo__collectionGear__content, .optimize__optimizer__characterInfo__collectionPercentages__content, .optimize__optimizer__characterInfo__guildBonuses__content, .optimize__optimizer__characterInfo__playerInfo__content {
     gap: 10px;
   }
@@ -530,6 +635,89 @@ a {
   }
   .optimize__optimizer__characterInfo__results__content {
     gap: 4px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .optimize__optimizer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .optimize__optimizer__heading {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .optimize__optimizer__playerInfo {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  .optimize__optimizer__settings {
+    position: relative;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+    display: -ms-grid;
+    display: grid;
+    gap: 0 68px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .optimize__optimizer__settings__heading {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .optimize__optimizer__settings__priority {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  .optimize__optimizer__settings__priority__custom {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  .optimize__optimizer__settings__build {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  .optimize__optimizer__characterInfo {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .optimize__optimizer__settings {
+    display: block;
   }
 }
 
