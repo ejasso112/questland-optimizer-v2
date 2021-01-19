@@ -180,8 +180,8 @@ const displayResults = () => {
         $(`#equippedBoots`).val(boots)
         const talisman =  gear.itemSlot === 'TALISMAN' ? gear.value : $(`#equippedTalisman`).val()
         $(`#equippedTalisman`).val(talisman)
-        const necklace =  gear.itemSlot === 'NECKLACE' ? gear.value : $(`#equippedNacklace`).val()
-        $(`#equippedNacklace`).val(necklace)
+        const necklace =  gear.itemSlot === 'NECKLACE' ? gear.value : $(`#equippedNecklace`).val()
+        $(`#equippedNecklace`).val(necklace)
         const ring =  gear.itemSlot === 'RING' ? gear.value : $(`#equippedRing`).val()
         $(`#equippedRing`).val(ring)
     }
