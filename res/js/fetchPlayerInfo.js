@@ -6,7 +6,7 @@ import displayInputs from './displayInputs.js'
 
 const fetchPlayerInfo = async () => {
     //Display Loading
-    $("#playerInfoLoading").css("display", "inline")
+    $('#playerInfoLoading').css('display', 'inline')
 
     // Fetching Guild Data
     const urlGuild = `https://questland-public-api-dot-questland-tools.uc.r.appspot.com/guild/${$('#guildName').val()}?server=${$('#serverName').val()}`
@@ -15,29 +15,49 @@ const fetchPlayerInfo = async () => {
 
     // Adding GuildBonuses to State
     state.guildBonuses = {
-        attack: dataGuild.attackResearchLevel === null ? 0
-            : dataGuild.attackResearchLevel <= 1 ? 0
-            : dataGuild.attackResearchLevel === 2 ? 2
-            : dataGuild.attackResearchLevel === 3 ? 4
-            : dataGuild.attackResearchLevel + 2,
+        attack:
+            dataGuild.attackResearchLevel === null
+                ? 0
+                : dataGuild.attackResearchLevel <= 1
+                ? 0
+                : dataGuild.attackResearchLevel === 2
+                ? 2
+                : dataGuild.attackResearchLevel === 3
+                ? 4
+                : dataGuild.attackResearchLevel + 2,
 
-        defense: dataGuild.defenseResearchLevel === null ? 0
-            : dataGuild.defenseResearchLevel <= 1 ? 0
-            : dataGuild.defenseResearchLevel === 2 ? 2
-            : dataGuild.defenseResearchLevel === 3 ? 4
-            : dataGuild.defenseResearchLevel + 2,
+        defense:
+            dataGuild.defenseResearchLevel === null
+                ? 0
+                : dataGuild.defenseResearchLevel <= 1
+                ? 0
+                : dataGuild.defenseResearchLevel === 2
+                ? 2
+                : dataGuild.defenseResearchLevel === 3
+                ? 4
+                : dataGuild.defenseResearchLevel + 2,
 
-        health: dataGuild.healthResearchLevel === null ? 0
-            : dataGuild.healthResearchLevel <= 1 ? 0
-            : dataGuild.healthResearchLevel === 2 ? 2
-            : dataGuild.healthResearchLevel === 3 ? 4
-            : dataGuild.healthResearchLevel + 2,
+        health:
+            dataGuild.healthResearchLevel === null
+                ? 0
+                : dataGuild.healthResearchLevel <= 1
+                ? 0
+                : dataGuild.healthResearchLevel === 2
+                ? 2
+                : dataGuild.healthResearchLevel === 3
+                ? 4
+                : dataGuild.healthResearchLevel + 2,
 
-        magic: dataGuild.magicResearchLevel === null ? 0
-            : dataGuild.magicResearchLevel <= 1 ? 0
-            : dataGuild.magicResearchLevel === 2 ? 2
-            : dataGuild.magicResearchLevel === 3 ? 4
-            : dataGuild.magicResearchLevel + 2,
+        magic:
+            dataGuild.magicResearchLevel === null
+                ? 0
+                : dataGuild.magicResearchLevel <= 1
+                ? 0
+                : dataGuild.magicResearchLevel === 2
+                ? 2
+                : dataGuild.magicResearchLevel === 3
+                ? 4
+                : dataGuild.magicResearchLevel + 2,
     }
     storeGuildBonuses()
 
@@ -45,7 +65,7 @@ const fetchPlayerInfo = async () => {
     const urlPlayer = `https://questland-public-api-dot-questland-tools.uc.r.appspot.com/hero/${$('#guildName').val()}/${$('#playerName').val()}?server=${$('#serverName').val()}`
     const resPlayer = await fetch(urlPlayer)
     const dataPlayer = await resPlayer.json()
-    
+
     console.log(dataPlayer)
     // Adding Collection Percentages to State
     state.collectionPercentages = {
@@ -77,7 +97,17 @@ const fetchPlayerInfo = async () => {
     let slotVal = 1
     for (let i = 0; i < dataPlayer.equippedGear.length; i++) {
         const gear = binarySearch(state.gear, 'id', dataPlayer.equippedGear[i].id)
-        const baseGearId = state.gearSorted.filter(value => value.name === gear.name && value.quality !== 'ARTIFACT1' && value.quality !== 'ARTIFACT2' && value.quality !== 'ARTIFACT3' && value.quality !== 'ARTIFACT4' && value.quality !== 'ARTIFACT5' && value.quality !== 'ARTIFACT6' && value.quality !== 'ARTIFACT7')[0].id
+        const baseGearId = state.gearSorted.filter(
+            value =>
+                value.name === gear.name &&
+                value.quality !== 'ARTIFACT1' &&
+                value.quality !== 'ARTIFACT2' &&
+                value.quality !== 'ARTIFACT3' &&
+                value.quality !== 'ARTIFACT4' &&
+                value.quality !== 'ARTIFACT5' &&
+                value.quality !== 'ARTIFACT6' &&
+                value.quality !== 'ARTIFACT7'
+        )[0].id
 
         if (gear.itemSlot !== 'MAIN_HAND' && gear.itemSlot !== 'OFF_HAND') {
             gearObj[`slot${slotVal}`] = {
@@ -102,14 +132,24 @@ const fetchPlayerInfo = async () => {
         }
     }
     state.equppedGear = gearObj
-    
-    await calcLinks()
-    
+
+    // await calcLinks()
+
     //Adding Collection 1 Gear to State
     let collection1Obj = {}
     for (let i = 0; i < dataPlayer.collections1.length; i++) {
         const gear = binarySearch(state.gear, 'id', dataPlayer.collections1[i].id)
-        const baseGearId = state.gearSorted.filter(value => value.name === gear.name && value.quality !== 'ARTIFACT1' && value.quality !== 'ARTIFACT2' && value.quality !== 'ARTIFACT3' && value.quality !== 'ARTIFACT4' && value.quality !== 'ARTIFACT5' && value.quality !== 'ARTIFACT6' && value.quality !== 'ARTIFACT7')[0].id
+        const baseGearId = state.gearSorted.filter(
+            value =>
+                value.name === gear.name &&
+                value.quality !== 'ARTIFACT1' &&
+                value.quality !== 'ARTIFACT2' &&
+                value.quality !== 'ARTIFACT3' &&
+                value.quality !== 'ARTIFACT4' &&
+                value.quality !== 'ARTIFACT5' &&
+                value.quality !== 'ARTIFACT6' &&
+                value.quality !== 'ARTIFACT7'
+        )[0].id
 
         collection1Obj[`slot${dataPlayer.collections1[i].collectionPosition}`] = {
             id: gear.id,
@@ -130,11 +170,42 @@ const fetchPlayerInfo = async () => {
         }
     }
 
+    for (let i = 1; i <= 10; i++) {
+        if (!collection1Obj[`slot${i}`]) {
+            collection1Obj[`slot${i}`] = {
+                id: 1,
+                baseId: 1,
+                value: 'Locked',
+                attack: 0,
+                defense: 0,
+                health: 0,
+                magic: 0,
+                itemBonus: 'none',
+                orbBonus: 'none',
+                itemLink1: 'none',
+                itemLink2: 'none',
+                itemLink3: 'none',
+                itemSlot: 'none',
+                artifact: 0,
+                links: 0,
+            }
+        }
+    }
     //Adding Collection 2 Gear to State
     let collection2Obj = {}
     for (let i = 0; i < dataPlayer.collections2.length; i++) {
         const gear = binarySearch(state.gear, 'id', dataPlayer.collections2[i].id)
-        const baseGearId = state.gearSorted.filter(value => value.name === gear.name && value.quality !== 'ARTIFACT1' && value.quality !== 'ARTIFACT2' && value.quality !== 'ARTIFACT3' && value.quality !== 'ARTIFACT4' && value.quality !== 'ARTIFACT5' && value.quality !== 'ARTIFACT6' && value.quality !== 'ARTIFACT7')[0].id
+        const baseGearId = state.gearSorted.filter(
+            value =>
+                value.name === gear.name &&
+                value.quality !== 'ARTIFACT1' &&
+                value.quality !== 'ARTIFACT2' &&
+                value.quality !== 'ARTIFACT3' &&
+                value.quality !== 'ARTIFACT4' &&
+                value.quality !== 'ARTIFACT5' &&
+                value.quality !== 'ARTIFACT6' &&
+                value.quality !== 'ARTIFACT7'
+        )[0].id
 
         collection2Obj[`slot${dataPlayer.collections2[i].collectionPosition + 10}`] = {
             id: gear.id,
@@ -155,18 +226,40 @@ const fetchPlayerInfo = async () => {
         }
     }
 
-    state.collectionGear = {...collection1Obj,...collection2Obj}
-    
+    for (let i = 11; i <= 20; i++) {
+        if (!collection2Obj[`slot${i}`]) {
+            collection2Obj[`slot${i}`] = {
+                id: 1,
+                baseId: 1,
+                value: 'Locked',
+                attack: 0,
+                defense: 0,
+                health: 0,
+                magic: 0,
+                itemBonus: 'none',
+                orbBonus: 'none',
+                itemLink1: 'none',
+                itemLink2: 'none',
+                itemLink3: 'none',
+                itemSlot: 'none',
+                artifact: 0,
+                links: 0,
+            }
+        }
+    }
+    console.log(collection2Obj)
+    state.collectionGear = { ...collection1Obj, ...collection2Obj }
+
     await calcLinks()
-    
+
     storeEquppedGear()
     storeCollectionGear()
-    
+
     displayInputs()
-    
+
     //Display Loaded
-    $("#playerInfoLoading").css("display", "none")
-    $("#playerInfoLoaded").css("display", "inline")
+    $('#playerInfoLoading').css('display', 'none')
+    $('#playerInfoLoaded').css('display', 'inline')
 }
 
 export const fetchPlayerInfoListener = () => {

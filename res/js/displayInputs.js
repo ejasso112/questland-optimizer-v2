@@ -38,8 +38,8 @@ const displayCollectionPercentages = () => {
 }
 
 const displayEquippedGear = () => {
-    for(let i = 1; i <= 7 ; i++) {
-        if(state.equppedGear[`slot${i}`] !== null) {
+    for (let i = 1; i <= 7; i++) {
+        if (state.equppedGear[`slot${i}`] !== null) {
             $(`#equippedGear${i}`).val(state.equppedGear[`slot${i}`].value)
             $(`#equippedAwake${i}`).val(state.equppedGear[`slot${i}`].artifact)
             $(`#equippedLink${i}`).val(state.equppedGear[`slot${i}`].links)
@@ -48,33 +48,27 @@ const displayEquippedGear = () => {
 }
 
 const displayCollectionGear = () => {
-    for(let i = 1; i <= 20 ; i++) {
-        if(state.collectionGear[`slot${i}`] !== null) {
-            $(`#collectionGear${i}`).val(state.collectionGear[`slot${i}`].value)
-            $(`#collectionAwake${i}`).val(state.collectionGear[`slot${i}`].artifact)
-            $(`#collectionLink${i}`).val(state.collectionGear[`slot${i}`].links)
+    for (let i = 1; i <= 20; i++) {
+        if (state.collectionGear[`slot${i}`] !== null) {
+            $(`#collectionGear${i}`).val(state.collectionGear[`slot${i}`]?.value || 'Locked')
+            $(`#collectionAwake${i}`).val(state.collectionGear[`slot${i}`]?.artifact || 0)
+            $(`#collectionLink${i}`).val(state.collectionGear[`slot${i}`]?.links || 0)
         }
     }
 }
 
 const displayLinks = () => {
-    for(let i = 1; i <= 7 ; i++) {
-        if(state.equppedGear[`slot${i}`] !== null) {
+    for (let i = 1; i <= 7; i++) {
+        if (state.equppedGear[`slot${i}`] !== null) {
             $(`#equippedLink${i}`).val(state.equppedGear[`slot${i}`].links)
         }
     }
-    for(let i = 1; i <= 20 ; i++) {
-        if(state.collectionGear[`slot${i}`] !== null) {
+    for (let i = 1; i <= 20; i++) {
+        if (state.collectionGear[`slot${i}`] !== null) {
             $(`#collectionLink${i}`).val(state.collectionGear[`slot${i}`].links)
         }
     }
 }
 
 export default displayInputs
-export {
-    displayGuildBonuses,
-    displayCollectionPercentages,
-    displayEquippedGear,
-    displayCollectionGear,
-    displayLinks,
-}
+export { displayGuildBonuses, displayCollectionPercentages, displayEquippedGear, displayCollectionGear, displayLinks }
